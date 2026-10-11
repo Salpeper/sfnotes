@@ -5,5 +5,6 @@ contextBridge.exposeInMainWorld('sfnotes', {
   readItems: () => ipcRenderer.invoke('data:read'),
   saveItems: (items) => ipcRenderer.invoke('data:write', items),
   setPinned: (value) => ipcRenderer.send('window:pin', value),
+  platform: process.platform,
   close: () => window.close()
 });

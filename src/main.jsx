@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import {
-  ArrowLeft, Check, Clipboard, Copy, Image as ImageIcon,
+  Check, Clipboard, Copy, Image as ImageIcon,
   Link as LinkIcon, MoreHorizontal, MoreVertical, Pin, PinOff, Plus, Search,
   Settings as SettingsIcon, StickyNote, Scissors, Trash2, X
 } from 'lucide-react';
@@ -13,9 +13,82 @@ const starter = [
   { id: 'a3', type: 'text', value: 'SFNotes: un pequeño espacio para guardar lo que importa.' }
 ];
 
+const supportedLanguages = [
+  ['es', 'Español'], ['en', 'English'], ['fr', 'Français'],
+  ['de', 'Deutsch'], ['it', 'Italiano'], ['pt', 'Português']
+];
+
+function detectLanguage() {
+  const locale = (navigator.language || 'es').slice(0, 2).toLowerCase();
+  return supportedLanguages.some(([code]) => code === locale) ? locale : 'es';
+}
+
+const translations = {
+  es: {
+    search: 'Buscar en todas las notas', notes: 'Notas', note: 'nota', notesPlural: 'notas', all: 'Todas', text: 'Texto', links: 'Enlaces', images: 'Imágenes', filterNotes: 'Filtrar notas', typeLink: 'Enlace', typeImage: 'Imagen', typeText: 'Texto',
+    noMatches: 'No hay notas con ese filtro.', empty: 'Pega algo para guardarlo aquí.', copyHint: 'Pulsa para copiar', imageSaved: 'Imagen guardada', imagePasted: 'Imagen pegada',
+    searchTitle: 'Buscar', pasteTitle: 'Pegar del portapapeles', moreTitle: 'Más opciones', pasteAdded: 'Añadido a Notas', nothingToPaste: 'No hay nada que pegar', clipboardError: 'No se pudo leer el portapapeles', copied: 'Copiado', cut: 'Copiado y quitado de Notas', copyError: 'No se pudo copiar', copyAction: 'Copiar', cutAction: 'Cortar', deleteAction: 'Eliminar', shiftClick: '⇧ + clic',
+    pinned: 'Fijada', pin: 'Fijar en escritorio', unpin: 'Desfijar ventana', pinWindow: 'Fijar ventana', closeApp: 'Cerrar SFNotes', settings: 'Ajustes',
+    appearance: 'APARIENCIA', theme: 'Tema', light: 'Claro', dark: 'Oscuro', lavender: 'Lavanda', accent: 'Color de acento', yellow: 'Amarillo', blue: 'Azul', green: 'Verde',
+    reading: 'LECTURA', fontSize: 'Tamaño de texto', fontHelp: 'Elige el tamaño de las notas', small: 'Pequeño', medium: 'Medio', large: 'Grande', density: 'Densidad de notas', densityHelp: 'Espacio entre fragmentos', comfortable: 'Cómoda', compact: 'Compacta',
+    behavior: 'COMPORTAMIENTO', pinOnStart: 'Fijar al iniciar', pinHelp: 'Mantener la nota sobre otras ventanas', showNumbers: 'Mostrar numeración', numbersHelp: 'Identificar notas de un vistazo', language: 'Idioma',
+    localData: 'Tus notas y preferencias se guardan en este dispositivo.', editNote: 'EDITAR NOTA', yourText: 'Tu texto', savedLocal: 'Guardado en este dispositivo', save: 'Guardar', changesSaved: 'Cambios guardados'
+  },
+  en: {
+    search: 'Search all notes', notes: 'Notes', note: 'note', notesPlural: 'notes', all: 'All', text: 'Text', links: 'Links', images: 'Images', filterNotes: 'Filter notes', typeLink: 'Link', typeImage: 'Image', typeText: 'Text',
+    noMatches: 'No notes match this filter.', empty: 'Paste something to save it here.', copyHint: 'Click to copy', imageSaved: 'Saved image', imagePasted: 'Pasted image',
+    searchTitle: 'Search', pasteTitle: 'Paste from clipboard', moreTitle: 'More options', pasteAdded: 'Added to Notes', nothingToPaste: 'Nothing to paste', clipboardError: 'Could not read clipboard', copied: 'Copied', cut: 'Copied and removed from Notes', copyError: 'Could not copy', copyAction: 'Copy', cutAction: 'Cut', deleteAction: 'Delete', shiftClick: '⇧ + click',
+    pinned: 'Pinned', pin: 'Pin to desktop', unpin: 'Unpin window', pinWindow: 'Pin window', closeApp: 'Close SFNotes', settings: 'Settings',
+    appearance: 'APPEARANCE', theme: 'Theme', light: 'Light', dark: 'Dark', lavender: 'Lavender', accent: 'Accent color', yellow: 'Yellow', blue: 'Blue', green: 'Green',
+    reading: 'READING', fontSize: 'Text size', fontHelp: 'Choose note text size', small: 'Small', medium: 'Medium', large: 'Large', density: 'Note spacing', densityHelp: 'Space between notes', comfortable: 'Comfortable', compact: 'Compact',
+    behavior: 'BEHAVIOR', pinOnStart: 'Pin on startup', pinHelp: 'Keep the note above other windows', showNumbers: 'Show numbering', numbersHelp: 'Identify notes at a glance', language: 'Language',
+    localData: 'Your notes and preferences are saved on this device.', editNote: 'EDIT NOTE', yourText: 'Your text', savedLocal: 'Saved on this device', save: 'Save', changesSaved: 'Changes saved'
+  },
+  fr: {
+    search: 'Rechercher dans les notes', notes: 'Notes', note: 'note', notesPlural: 'notes', all: 'Toutes', text: 'Texte', links: 'Liens', images: 'Images', filterNotes: 'Filtrer les notes', typeLink: 'Lien', typeImage: 'Image', typeText: 'Texte',
+    noMatches: 'Aucune note pour ce filtre.', empty: 'Collez un élément pour l’enregistrer ici.', copyHint: 'Cliquer pour copier', imageSaved: 'Image enregistrée', imagePasted: 'Image collée',
+    searchTitle: 'Rechercher', pasteTitle: 'Coller depuis le presse-papiers', moreTitle: 'Plus d’options', pasteAdded: 'Ajouté aux notes', nothingToPaste: 'Rien à coller', clipboardError: 'Impossible de lire le presse-papiers', copied: 'Copié', cut: 'Copié et retiré des notes', copyError: 'Impossible de copier', copyAction: 'Copier', cutAction: 'Couper', deleteAction: 'Supprimer', shiftClick: '⇧ + clic',
+    pinned: 'Épinglée', pin: 'Épingler sur le bureau', unpin: 'Désépingler la fenêtre', pinWindow: 'Épingler la fenêtre', closeApp: 'Fermer SFNotes', settings: 'Réglages',
+    appearance: 'APPARENCE', theme: 'Thème', light: 'Clair', dark: 'Sombre', lavender: 'Lavande', accent: 'Couleur d’accent', yellow: 'Jaune', blue: 'Bleu', green: 'Vert',
+    reading: 'LECTURE', fontSize: 'Taille du texte', fontHelp: 'Choisir la taille du texte', small: 'Petite', medium: 'Moyenne', large: 'Grande', density: 'Espacement des notes', densityHelp: 'Espace entre les notes', comfortable: 'Aéré', compact: 'Compact',
+    behavior: 'COMPORTEMENT', pinOnStart: 'Épingler au démarrage', pinHelp: 'Garder la note au-dessus des fenêtres', showNumbers: 'Afficher les numéros', numbersHelp: 'Repérer les notes rapidement', language: 'Langue',
+    localData: 'Vos notes et préférences sont enregistrées sur cet appareil.', editNote: 'MODIFIER LA NOTE', yourText: 'Votre texte', savedLocal: 'Enregistré sur cet appareil', save: 'Enregistrer', changesSaved: 'Modifications enregistrées'
+  },
+  de: {
+    search: 'Notizen durchsuchen', notes: 'Notizen', note: 'Notiz', notesPlural: 'Notizen', all: 'Alle', text: 'Text', links: 'Links', images: 'Bilder', filterNotes: 'Notizen filtern', typeLink: 'Link', typeImage: 'Bild', typeText: 'Text',
+    noMatches: 'Keine Notizen für diesen Filter.', empty: 'Füge etwas ein, um es hier zu speichern.', copyHint: 'Zum Kopieren klicken', imageSaved: 'Gespeichertes Bild', imagePasted: 'Eingefügtes Bild',
+    searchTitle: 'Suchen', pasteTitle: 'Aus Zwischenablage einfügen', moreTitle: 'Weitere Optionen', pasteAdded: 'Zu Notizen hinzugefügt', nothingToPaste: 'Nichts zum Einfügen', clipboardError: 'Zwischenablage konnte nicht gelesen werden', copied: 'Kopiert', cut: 'Kopiert und aus Notizen entfernt', copyError: 'Kopieren nicht möglich', copyAction: 'Kopieren', cutAction: 'Ausschneiden', deleteAction: 'Löschen', shiftClick: '⇧ + Klick',
+    pinned: 'Angeheftet', pin: 'Am Desktop anheften', unpin: 'Fenster lösen', pinWindow: 'Fenster anheften', closeApp: 'SFNotes schließen', settings: 'Einstellungen',
+    appearance: 'ERSCHEINUNGSBILD', theme: 'Design', light: 'Hell', dark: 'Dunkel', lavender: 'Lavendel', accent: 'Akzentfarbe', yellow: 'Gelb', blue: 'Blau', green: 'Grün',
+    reading: 'LESEN', fontSize: 'Textgröße', fontHelp: 'Textgröße der Notizen wählen', small: 'Klein', medium: 'Mittel', large: 'Groß', density: 'Notizabstand', densityHelp: 'Abstand zwischen Notizen', comfortable: 'Locker', compact: 'Kompakt',
+    behavior: 'VERHALTEN', pinOnStart: 'Beim Start anheften', pinHelp: 'Notiz über anderen Fenstern halten', showNumbers: 'Nummerierung anzeigen', numbersHelp: 'Notizen schnell erkennen', language: 'Sprache',
+    localData: 'Notizen und Einstellungen werden auf diesem Gerät gespeichert.', editNote: 'NOTIZ BEARBEITEN', yourText: 'Dein Text', savedLocal: 'Auf diesem Gerät gespeichert', save: 'Speichern', changesSaved: 'Änderungen gespeichert'
+  },
+  it: {
+    search: 'Cerca in tutte le note', notes: 'Note', note: 'nota', notesPlural: 'note', all: 'Tutte', text: 'Testo', links: 'Link', images: 'Immagini', filterNotes: 'Filtra le note', typeLink: 'Link', typeImage: 'Immagine', typeText: 'Testo',
+    noMatches: 'Nessuna nota per questo filtro.', empty: 'Incolla qualcosa per salvarlo qui.', copyHint: 'Fai clic per copiare', imageSaved: 'Immagine salvata', imagePasted: 'Immagine incollata',
+    searchTitle: 'Cerca', pasteTitle: 'Incolla dagli appunti', moreTitle: 'Altre opzioni', pasteAdded: 'Aggiunto alle Note', nothingToPaste: 'Niente da incollare', clipboardError: 'Impossibile leggere gli appunti', copied: 'Copiato', cut: 'Copiato e rimosso dalle Note', copyError: 'Impossibile copiare', copyAction: 'Copia', cutAction: 'Taglia', deleteAction: 'Elimina', shiftClick: '⇧ + clic',
+    pinned: 'Fissata', pin: 'Fissa sul desktop', unpin: 'Sblocca finestra', pinWindow: 'Fissa finestra', closeApp: 'Chiudi SFNotes', settings: 'Impostazioni',
+    appearance: 'ASPETTO', theme: 'Tema', light: 'Chiaro', dark: 'Scuro', lavender: 'Lavanda', accent: 'Colore principale', yellow: 'Giallo', blue: 'Blu', green: 'Verde',
+    reading: 'LETTURA', fontSize: 'Dimensione testo', fontHelp: 'Scegli la dimensione del testo', small: 'Piccolo', medium: 'Medio', large: 'Grande', density: 'Spaziatura note', densityHelp: 'Spazio tra le note', comfortable: 'Ampia', compact: 'Compatta',
+    behavior: 'COMPORTAMENTO', pinOnStart: 'Fissa all’avvio', pinHelp: 'Mantieni la nota sopra le altre finestre', showNumbers: 'Mostra numerazione', numbersHelp: 'Riconosci le note a colpo d’occhio', language: 'Lingua',
+    localData: 'Note e preferenze sono salvate su questo dispositivo.', editNote: 'MODIFICA NOTA', yourText: 'Il tuo testo', savedLocal: 'Salvato su questo dispositivo', save: 'Salva', changesSaved: 'Modifiche salvate'
+  },
+  pt: {
+    search: 'Pesquisar em todas as notas', notes: 'Notas', note: 'nota', notesPlural: 'notas', all: 'Todas', text: 'Texto', links: 'Links', images: 'Imagens', filterNotes: 'Filtrar notas', typeLink: 'Link', typeImage: 'Imagem', typeText: 'Texto',
+    noMatches: 'Nenhuma nota neste filtro.', empty: 'Cole algo para guardar aqui.', copyHint: 'Clique para copiar', imageSaved: 'Imagem guardada', imagePasted: 'Imagem colada',
+    searchTitle: 'Pesquisar', pasteTitle: 'Colar da área de transferência', moreTitle: 'Mais opções', pasteAdded: 'Adicionado às Notas', nothingToPaste: 'Nada para colar', clipboardError: 'Não foi possível ler a área de transferência', copied: 'Copiado', cut: 'Copiado e removido das Notas', copyError: 'Não foi possível copiar', copyAction: 'Copiar', cutAction: 'Cortar', deleteAction: 'Eliminar', shiftClick: '⇧ + clique',
+    pinned: 'Fixada', pin: 'Fixar no ambiente de trabalho', unpin: 'Desafixar janela', pinWindow: 'Fixar janela', closeApp: 'Fechar SFNotes', settings: 'Definições',
+    appearance: 'APARÊNCIA', theme: 'Tema', light: 'Claro', dark: 'Escuro', lavender: 'Lavanda', accent: 'Cor de destaque', yellow: 'Amarelo', blue: 'Azul', green: 'Verde',
+    reading: 'LEITURA', fontSize: 'Tamanho do texto', fontHelp: 'Escolha o tamanho do texto', small: 'Pequeno', medium: 'Médio', large: 'Grande', density: 'Espaçamento das notas', densityHelp: 'Espaço entre notas', comfortable: 'Confortável', compact: 'Compacto',
+    behavior: 'COMPORTAMENTO', pinOnStart: 'Fixar ao iniciar', pinHelp: 'Manter a nota sobre outras janelas', showNumbers: 'Mostrar numeração', numbersHelp: 'Identificar notas rapidamente', language: 'Idioma',
+    localData: 'As notas e preferências ficam guardadas neste dispositivo.', editNote: 'EDITAR NOTA', yourText: 'O seu texto', savedLocal: 'Guardado neste dispositivo', save: 'Guardar', changesSaved: 'Alterações guardadas'
+  }
+};
+
 const defaultSettings = {
   theme: 'light', accent: 'yellow', fontSize: 'medium', density: 'comfortable',
-  pinOnStart: true, showNumbers: true
+  pinOnStart: true, showNumbers: true, language: detectLanguage()
 };
 
 function readSettings() {
@@ -24,7 +97,7 @@ function readSettings() {
 }
 
 const identify = (value) => /^https?:\/\//i.test(value.trim()) ? 'url' : 'text';
-const itemType = (type) => type === 'url' ? 'Enlace' : type === 'image' ? 'Imagen' : 'Texto';
+const languageOptions = supportedLanguages;
 
 function App() {
   const [items, setItems] = useState(() => {
@@ -33,6 +106,8 @@ function App() {
   });
   const [loaded, setLoaded] = useState(!window.sfnotes);
   const [settings, setSettings] = useState(readSettings);
+  const t = translations[settings.language] || translations.es;
+  const searchShortcut = (window.sfnotes?.platform || (navigator.platform.includes('Mac') ? 'darwin' : 'other')) === 'darwin' ? '⌘ F' : 'Ctrl F';
   const [pinned, setPinned] = useState(() => readSettings().pinOnStart);
   const [query, setQuery] = useState('');
   const [filter, setFilter] = useState('all');
@@ -77,7 +152,7 @@ function App() {
   const add = (kind, value) => {
     if (!value) return;
     setItems((old) => [{ id: crypto.randomUUID(), type: kind, value }, ...old]);
-    notify('Añadido a Notas');
+    notify(t.pasteAdded);
   };
 
   const paste = async () => {
@@ -87,13 +162,13 @@ function App() {
       if (clip?.value) { add(identify(clip.value), clip.value); return; }
       const text = await navigator.clipboard.readText();
       if (text) add(identify(text), text);
-      else notify('No hay nada que pegar');
+      else notify(t.nothingToPaste);
     } catch {
       try {
         const text = await navigator.clipboard.readText();
         if (text) add(identify(text), text);
-        else notify('No hay nada que pegar');
-      } catch { notify('No se pudo leer el portapapeles'); }
+        else notify(t.nothingToPaste);
+      } catch { notify(t.clipboardError); }
     }
   };
 
@@ -116,8 +191,8 @@ function App() {
       if (window.sfnotes) await window.sfnotes.writeClipboard({ kind: item.type === 'image' ? 'image' : 'text', value: item.value });
       else await navigator.clipboard.writeText(item.value);
       if (cut) setItems((old) => old.filter((entry) => entry.id !== item.id));
-      notify(cut ? 'Copiado y quitado de Notas' : 'Copiado');
-    } catch { notify('No se pudo copiar'); }
+      notify(cut ? t.cut : t.copied);
+    } catch { notify(t.copyError); }
   };
 
   const togglePin = () => {
@@ -137,17 +212,17 @@ function App() {
       <header className="topbar">
         <div className="brand"><span className="brandmark"><StickyNote size={17} /></span><b>SFNotes</b></div>
         <div className="top-actions">
-          <button className="round-button" title="Buscar" onClick={() => searchRef.current?.focus()}><Search size={16} /></button>
-          <button className="round-button" title="Pegar del portapapeles" onClick={paste}><Plus size={18} /></button>
-          <button className="round-button" title="Más opciones" onClick={(event) => { event.stopPropagation(); setAppMenu(!appMenu); }}><MoreHorizontal size={18} /></button>
+          <button className="round-button" title={t.searchTitle} onClick={() => searchRef.current?.focus()}><Search size={16} /></button>
+          <button className="round-button" title={t.pasteTitle} onClick={paste}><Plus size={18} /></button>
+          <button className="round-button" title={t.moreTitle} onClick={(event) => { event.stopPropagation(); setAppMenu(!appMenu); }}><MoreHorizontal size={18} /></button>
         </div>
       </header>
 
       <section className="notes-view">
-        <label className="search-field"><Search size={15} /><input ref={searchRef} value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Buscar en todas las notas" /><kbd>⌘ F</kbd></label>
-        <div className="section-heading"><h1>Notas</h1><span>{items.length} {items.length === 1 ? 'nota' : 'notas'}</span></div>
-        <nav className="filters" aria-label="Filtrar notas">
-          {[['all', 'Todas'], ['text', 'Texto'], ['url', 'Enlaces'], ['image', 'Imágenes']].map(([value, label]) => (
+        <label className="search-field"><Search size={15} /><input ref={searchRef} value={query} onChange={(event) => setQuery(event.target.value)} placeholder={t.search} /><kbd>{searchShortcut}</kbd></label>
+        <div className="section-heading"><h1>{t.notes}</h1><span>{items.length} {items.length === 1 ? t.note : t.notesPlural}</span></div>
+        <nav className="filters" aria-label={t.filterNotes}>
+          {[['all', t.all], ['text', t.text], ['url', t.links], ['image', t.images]].map(([value, label]) => (
             <button key={value} className={filter === value ? 'selected' : ''} onClick={() => setFilter(value)}>{label}</button>
           ))}
         </nav>
@@ -164,11 +239,11 @@ function App() {
             >
               <div className="note-meta">
                 {settings.showNumbers && <span className="note-number">{String(items.indexOf(item) + 1).padStart(2, '0')}</span>}
-                <span>{itemType(item.type)}</span>
-                <button className="note-more" title="Opciones de la nota" onClick={(event) => { event.stopPropagation(); setItemMenu({ id: item.id, x: event.clientX, y: event.clientY }); }}><MoreVertical size={15} /></button>
+                <span>{item.type === 'url' ? t.typeLink : item.type === 'image' ? t.typeImage : t.typeText}</span>
+                <button className="note-more" title={t.moreTitle} onClick={(event) => { event.stopPropagation(); setItemMenu({ id: item.id, x: event.clientX, y: event.clientY }); }}><MoreVertical size={15} /></button>
               </div>
               {item.type === 'image' ? (
-                <div className="image-preview"><img src={item.value} alt="Imagen guardada" /><div><h3>Imagen guardada</h3><p>Imagen pegada</p></div></div>
+                <div className="image-preview"><img src={item.value} alt={t.imageSaved} /><div><h3>{t.imageSaved}</h3><p>{t.imagePasted}</p></div></div>
               ) : item.type === 'url' ? (
                 <div className="link-preview">
                   <span className="link-mark"><LinkIcon size={15} /></span>
@@ -177,70 +252,73 @@ function App() {
               ) : (
                 <p className="note-preview">{item.value.length > 150 ? `${item.value.slice(0, 150).trim()}…` : item.value}</p>
               )}
-              <span className="copy-label"><Copy size={12} /> Pulsa para copiar</span>
+              <span className="copy-label"><Copy size={12} /> {t.copyHint}</span>
             </article>
           ))}
-          {visibleItems.length === 0 && <div className="empty-state">{items.length ? 'No hay notas con ese filtro.' : 'Pega algo para guardarlo aquí.'}</div>}
+          {visibleItems.length === 0 && <div className="empty-state">{items.length ? t.noMatches : t.empty}</div>}
         </section>
       </section>
 
       <footer className="bottom-bar">
-        <button className={`footer-action ${pinned ? 'is-pinned' : ''}`} onClick={togglePin}><span className="footer-icon">{pinned ? <Pin size={15} /> : <PinOff size={15} />}</span>{pinned ? 'Fijada' : 'Fijar en escritorio'}</button>
-        <button className="new-note-button" title="Pegar del portapapeles" onClick={paste}><Plus size={20} /></button>
-        <button className="footer-action settings-action" onClick={() => setSettingsOpen(true)}><SettingsIcon size={15} /><span>Ajustes</span></button>
+        <button className={`footer-action ${pinned ? 'is-pinned' : ''}`} onClick={togglePin}><span className="footer-icon">{pinned ? <Pin size={15} /> : <PinOff size={15} />}</span>{pinned ? t.pinned : t.pin}</button>
+        <button className="new-note-button" title={t.pasteTitle} onClick={paste}><Plus size={20} /></button>
+        <button className="footer-action settings-action" onClick={() => setSettingsOpen(true)}><SettingsIcon size={15} /><span>{t.settings}</span></button>
       </footer>
 
       {appMenu && <div className="app-menu" onClick={(event) => event.stopPropagation()}>
-        <button onClick={() => { togglePin(); setAppMenu(false); }}>{pinned ? <PinOff size={14} /> : <Pin size={14} />}{pinned ? 'Desfijar ventana' : 'Fijar ventana'}</button>
-        <button onClick={() => { setSettingsOpen(true); setAppMenu(false); }}><SettingsIcon size={14} /> Ajustes</button>
-        <button onClick={() => window.sfnotes?.close()}><X size={14} /> Cerrar SFNotes</button>
+        <button onClick={() => { togglePin(); setAppMenu(false); }}>{pinned ? <PinOff size={14} /> : <Pin size={14} />}{pinned ? t.unpin : t.pinWindow}</button>
+        <button onClick={() => { setSettingsOpen(true); setAppMenu(false); }}><SettingsIcon size={14} /> {t.settings}</button>
+        <button onClick={() => window.sfnotes?.close()}><X size={14} /> {t.closeApp}</button>
       </div>}
 
       {itemMenu && <div className="context-menu" style={{ left: Math.min(itemMenu.x, window.innerWidth - 178), top: Math.min(itemMenu.y, window.innerHeight - 118) }} onClick={(event) => event.stopPropagation()}>
-        <button onClick={() => { const item = items.find((entry) => entry.id === itemMenu.id); if (item) copy(item); setItemMenu(null); }}><Copy size={14} /> Copiar</button>
-        <button onClick={() => { const item = items.find((entry) => entry.id === itemMenu.id); if (item) copy(item, true); setItemMenu(null); }}><Scissors size={14} /> Cortar <small>⇧ + clic</small></button>
-        <button className="danger" onClick={() => { setItems((old) => old.filter((entry) => entry.id !== itemMenu.id)); setItemMenu(null); }}><Trash2 size={14} /> Eliminar</button>
+        <button onClick={() => { const item = items.find((entry) => entry.id === itemMenu.id); if (item) copy(item); setItemMenu(null); }}><Copy size={14} /> {t.copyAction}</button>
+        <button onClick={() => { const item = items.find((entry) => entry.id === itemMenu.id); if (item) copy(item, true); setItemMenu(null); }}><Scissors size={14} /> {t.cutAction} <small>{t.shiftClick}</small></button>
+        <button className="danger" onClick={() => { setItems((old) => old.filter((entry) => entry.id !== itemMenu.id)); setItemMenu(null); }}><Trash2 size={14} /> {t.deleteAction}</button>
       </div>}
 
       {settingsOpen && <div className="settings-backdrop" onClick={() => setSettingsOpen(false)}>
         <section className="settings-panel" onClick={(event) => event.stopPropagation()}>
-          <header className="settings-header"><button className="back-button" onClick={() => setSettingsOpen(false)}><ArrowLeft size={18} /></button><h2>Ajustes</h2><button className="back-button" onClick={() => setSettingsOpen(false)} aria-label="Cerrar ajustes"><X size={17} /></button></header>
+          <header className="settings-header"><h2>{t.settings}</h2><button className="back-button" onClick={() => setSettingsOpen(false)} aria-label={t.closeApp}><X size={17} /></button></header>
           <div className="settings-content">
-            <p className="settings-label">APARIENCIA</p>
-            <h3>Tema</h3>
+            <p className="settings-label">{t.appearance}</p>
+            <h3>{t.theme}</h3>
             <div className="theme-options">
-              {[['light', 'Claro'], ['dark', 'Oscuro'], ['lavender', 'Lavanda']].map(([value, label]) => (
+              {[['light', t.light], ['dark', t.dark], ['lavender', t.lavender]].map(([value, label]) => (
                 <button key={value} className={`theme-option theme-${value} ${settings.theme === value ? 'chosen' : ''}`} onClick={() => setPreference('theme', value)}>
                   <span className="theme-swatch"><i /><i /></span><span>{label}</span>{settings.theme === value && <span className="theme-check"><Check size={11} /></span>}
                 </button>
               ))}
             </div>
 
-            <h3>Color de acento</h3>
-            <div className="accent-options" role="group" aria-label="Color de acento">
-              {[['yellow', 'Amarillo'], ['blue', 'Azul'], ['green', 'Verde']].map(([value, label]) => (
+            <h3>{t.accent}</h3>
+            <div className="accent-options" role="group" aria-label={t.accent}>
+              {[['yellow', t.yellow], ['blue', t.blue], ['green', t.green]].map(([value, label]) => (
                 <button key={value} aria-label={label} title={label} className={`accent-dot accent-${value} ${settings.accent === value ? 'chosen' : ''}`} onClick={() => setPreference('accent', value)}>{settings.accent === value && <Check size={13} />}</button>
               ))}
             </div>
 
             <div className="settings-divider" />
-            <p className="settings-label">LECTURA</p>
-            <div className="setting-row"><div><b>Tamaño de texto</b><span>Elige el tamaño de las notas</span></div><select value={settings.fontSize} onChange={(event) => setPreference('fontSize', event.target.value)}><option value="small">Pequeño</option><option value="medium">Medio</option><option value="large">Grande</option></select></div>
-            <div className="setting-row"><div><b>Densidad de notas</b><span>Espacio entre fragmentos</span></div><select value={settings.density} onChange={(event) => setPreference('density', event.target.value)}><option value="comfortable">Cómoda</option><option value="compact">Compacta</option></select></div>
+            <p className="settings-label">{t.reading}</p>
+            <div className="setting-row"><div><b>{t.fontSize}</b><span>{t.fontHelp}</span></div><select value={settings.fontSize} onChange={(event) => setPreference('fontSize', event.target.value)}><option value="small">{t.small}</option><option value="medium">{t.medium}</option><option value="large">{t.large}</option></select></div>
+            <div className="setting-row"><div><b>{t.density}</b><span>{t.densityHelp}</span></div><select value={settings.density} onChange={(event) => setPreference('density', event.target.value)}><option value="comfortable">{t.comfortable}</option><option value="compact">{t.compact}</option></select></div>
 
             <div className="settings-divider" />
-            <p className="settings-label">COMPORTAMIENTO</p>
-            <button className="toggle-row" onClick={() => { const next = !settings.pinOnStart; setPreference('pinOnStart', next); setPinned(next); window.sfnotes?.setPinned(next); }}><span><b>Fijar al iniciar</b><small>Mantener la nota sobre otras ventanas</small></span><i className={`switch ${settings.pinOnStart ? 'on' : ''}`} /></button>
-            <button className="toggle-row" onClick={() => setPreference('showNumbers', !settings.showNumbers)}><span><b>Mostrar numeración</b><small>Identificar notas de un vistazo</small></span><i className={`switch ${settings.showNumbers ? 'on' : ''}`} /></button>
-            <p className="settings-note"><Clipboard size={13} /> Tus notas y preferencias se guardan en este dispositivo.</p>
+            <div className="setting-row language-row"><div><b>{t.language}</b></div><select value={settings.language} onChange={(event) => setPreference('language', event.target.value)}>{languageOptions.map(([code, name]) => <option key={code} value={code}>{name}</option>)}</select></div>
+
+            <div className="settings-divider" />
+            <p className="settings-label">{t.behavior}</p>
+            <button className="toggle-row" onClick={() => { const next = !settings.pinOnStart; setPreference('pinOnStart', next); setPinned(next); window.sfnotes?.setPinned(next); }}><span><b>{t.pinOnStart}</b><small>{t.pinHelp}</small></span><i className={`switch ${settings.pinOnStart ? 'on' : ''}`} /></button>
+            <button className="toggle-row" onClick={() => setPreference('showNumbers', !settings.showNumbers)}><span><b>{t.showNumbers}</b><small>{t.numbersHelp}</small></span><i className={`switch ${settings.showNumbers ? 'on' : ''}`} /></button>
+            <p className="settings-note"><Clipboard size={13} /> {t.localData}</p>
           </div>
         </section>
       </div>}
 
       {edit && <div className="edit-backdrop" onClick={() => setEdit(null)}><div className="edit-panel" onClick={(event) => event.stopPropagation()}>
-        <div className="edit-header"><div><span>EDITAR NOTA</span><h2>Tu texto</h2></div><button className="back-button" onClick={() => setEdit(null)}><X size={17} /></button></div>
+        <div className="edit-header"><div><span>{t.editNote}</span><h2>{t.yourText}</h2></div><button className="back-button" onClick={() => setEdit(null)} aria-label={t.closeApp}><X size={17} /></button></div>
         <textarea autoFocus defaultValue={edit.value} ref={inputRef} />
-        <div className="edit-footer"><span>Guardado en este dispositivo</span><button onClick={() => { const value = inputRef.current.value; setItems((old) => old.map((item) => item.id === edit.id ? { ...item, value, type: 'text' } : item)); setEdit(null); notify('Cambios guardados'); }}>Guardar</button></div>
+        <div className="edit-footer"><span>{t.savedLocal}</span><button onClick={() => { const value = inputRef.current.value; setItems((old) => old.map((item) => item.id === edit.id ? { ...item, value, type: 'text' } : item)); setEdit(null); notify(t.changesSaved); }}>{t.save}</button></div>
       </div></div>}
 
       {toast && <div className="toast">{toast}</div>}

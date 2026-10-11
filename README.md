@@ -17,6 +17,7 @@ La aplicación está construida con Electron, React y Vite. El proyecto está pr
 - Busca fragmentos por su contenido.
 - Filtra la lista por texto, enlaces o imágenes.
 - Personaliza la apariencia con temas claro, oscuro o lavanda; elige un color de acento, tamaño de texto y densidad.
+- Cambia el idioma de la interfaz entre español, inglés, francés, alemán, italiano y portugués.
 - Configura si la ventana debe iniciarse fijada y si se muestran los números de las notas.
 - Fija la ventana para mantenerla sobre otras ventanas y, cuando el sistema lo permita, mostrarla en todos los espacios de trabajo.
 - Los fragmentos se guardan automáticamente al añadir, editar o borrar; al volver a abrir la aplicación se restauran.
