@@ -45,7 +45,7 @@ SFNotes guarda el contenido en un archivo `snippets.json` dentro de la carpeta d
 
 - **Windows:** la ventana puede mantenerse encima de otras ventanas. Electron no ofrece mostrarla automáticamente en todos los escritorios virtuales de Windows.
 - **macOS:** Electron permite mantenerla encima y mostrarla en todos los espacios de trabajo.
-- **Linux:** Electron ofrece fijar la ventana en todos los espacios de trabajo; el resultado depende del entorno de escritorio y del gestor de ventanas. Wayland puede limitar el posicionamiento de ventanas.
+- **Linux:** Electron ofrece fijar la ventana en todos los espacios de trabajo; el resultado depende del entorno de escritorio y del gestor de ventanas. En esta prueba con Hyprland sobre Wayland, la aplicación abrió, pero el compositor la organizó como una ventana en mosaico, ignoró el tamaño solicitado y no confirmó que se fijara en todos los espacios. En Wayland el posicionamiento y el cambio de tamaño también pueden estar restringidos.
 - El pegado admite imágenes y texto. Aún no hay gestión especializada de archivos adjuntos ni empaquetadores instalables para cada sistema.
 - La función de cortar una imagen la copia al portapapeles y la quita de SFNotes; no modifica el archivo de origen.
 

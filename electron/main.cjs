@@ -11,6 +11,12 @@ function createWindow() {
     alwaysOnTop: true, skipTaskbar: false, resizable: true, backgroundColor: '#00000000',
     webPreferences: { preload: path.join(__dirname, 'preload.cjs'), contextIsolation: true, nodeIntegration: false }
   });
+  win.webContents.on('did-fail-load', (_event, code, description, url) => {
+    console.error(`No se pudo cargar SFNotes (${code}): ${description} — ${url}`);
+  });
+  win.webContents.on('console-message', (event) => {
+    if (event.level >= 2) console.error(`SFNotes renderer: ${event.message}`);
+  });
   win.setVisibleOnAllWorkspaces(true, { visibleOnFullScreen: true });
   win.setAlwaysOnTop(true, 'floating');
   if (process.env.VITE_DEV_SERVER_URL) win.loadURL(process.env.VITE_DEV_SERVER_URL);
