@@ -2,6 +2,8 @@
 
 SFNotes es una nota flotante para capturar y tener a mano textos, enlaces e imágenes mientras trabajas. Su objetivo es que puedas consultar varios fragmentos de un vistazo sin editar accidentalmente el contenido.
 
+La maqueta inicial de la nueva apariencia está en [mockups/iphone-notes-concept.png](mockups/iphone-notes-concept.png).
+
 La aplicación está construida con Electron, React y Vite. El proyecto está preparado para Windows, macOS y Linux; aún es un prototipo y falta empaquetarlo y probarlo de forma nativa en cada sistema.
 
 ## Funciones
@@ -13,6 +15,9 @@ La aplicación está construida con Electron, React y Vite. El proyecto está pr
 - Haz clic derecho sobre un elemento para copiarlo, cortarlo o eliminarlo.
 - Haz clic con la rueda del ratón sobre un texto para abrir el editor.
 - Busca fragmentos por su contenido.
+- Filtra la lista por texto, enlaces o imágenes.
+- Personaliza la apariencia con temas claro, oscuro o lavanda; elige un color de acento, tamaño de texto y densidad.
+- Configura si la ventana debe iniciarse fijada y si se muestran los números de las notas.
 - Fija la ventana para mantenerla sobre otras ventanas y, cuando el sistema lo permita, mostrarla en todos los espacios de trabajo.
 - Los fragmentos se guardan automáticamente al añadir, editar o borrar; al volver a abrir la aplicación se restauran.
 
