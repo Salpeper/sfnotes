@@ -1,10 +1,63 @@
 # SFNotes
 
-SFNotes es una nota flotante para capturar y tener a mano textos, enlaces e imágenes mientras trabajas. Su objetivo es que puedas consultar varios fragmentos de un vistazo sin editar accidentalmente el contenido.
+SFNotes es una nota flotante para guardar textos, enlaces e imágenes en el escritorio. Los elementos se numeran y muestran una vista previa para que puedas encontrar y volver a copiar lo que necesitas. El contenido se guarda automáticamente en el dispositivo.
 
-La maqueta inicial de la nueva apariencia está en [mockups/iphone-notes-concept.png](mockups/iphone-notes-concept.png).
+La aplicación está hecha con Electron, React y Vite. Hay paquetes instalables para Windows, macOS y Linux (x64). En Linux se publican AppImage, DEB y RPM para cubrir la mayoría de distribuciones.
 
-La aplicación está construida con Electron, React y Vite. El proyecto está preparado para Windows, macOS y Linux; aún es un prototipo y falta empaquetarlo y probarlo de forma nativa en cada sistema.
+## Descargar e instalar
+
+Las versiones listas para instalar están en [Releases de SFNotes](https://github.com/Salpeper/sfnotes/releases). El repositorio es privado: inicia sesión en GitHub con una cuenta que tenga acceso al repositorio para ver y descargar sus archivos.
+
+### Windows 10/11
+
+1. Abre [Releases](https://github.com/Salpeper/sfnotes/releases) y entra en la versión más reciente.
+2. En **Assets**, descarga el instalador cuyo nombre termina en `Setup.exe` o `.exe`.
+3. Abre el archivo descargado y sigue el asistente. Puedes elegir la carpeta de instalación.
+4. Inicia **SFNotes** desde el menú Inicio.
+
+El instalador no lleva firma de código en esta versión. Si Windows muestra SmartScreen, comprueba que el archivo procede de este repositorio y elige **Más información** → **Ejecutar de todas formas**.
+
+### macOS (Intel y Apple Silicon)
+
+1. En la versión más reciente de [Releases](https://github.com/Salpeper/sfnotes/releases), descarga el archivo `.dmg`.
+2. Abre el DMG y arrastra **SFNotes** a **Applications/Aplicaciones**.
+3. Expulsa la imagen de disco y abre SFNotes desde Aplicaciones.
+
+La aplicación no está firmada ni notarizada por Apple todavía. Si macOS impide abrirla, ve a **Ajustes del Sistema → Privacidad y seguridad**, baja hasta la sección Seguridad y pulsa **Abrir igualmente** para SFNotes; confirma después **Abrir**. Esta opción aparece tras el primer intento de apertura.
+
+### Linux
+
+En **Assets** de la versión más reciente, descarga el formato adecuado para tu distribución. Los paquetes publicados son para Linux x64.
+
+**AppImage (recomendado para la mayoría de distribuciones):**
+
+1. Descarga el archivo `.AppImage`.
+2. Abre una terminal en la carpeta de descargas y ejecuta:
+
+   ```bash
+   chmod +x SFNotes-*.AppImage
+   ./SFNotes-*.AppImage
+   ```
+
+**Debian, Ubuntu y derivados:** descarga el `.deb` y, desde la carpeta de descargas, instala con:
+
+```bash
+sudo apt install ./SFNotes-*.deb
+```
+
+**Fedora:** descarga el `.rpm` y ejecuta:
+
+```bash
+sudo dnf install ./SFNotes-*.rpm
+```
+
+**openSUSE:** descarga el `.rpm` y ejecuta:
+
+```bash
+sudo zypper install ./SFNotes-*.rpm
+```
+
+Si el AppImage indica que falta FUSE, instala el paquete FUSE 2 compatible con tu distribución o usa el paquete DEB/RPM correspondiente. La integración de ventanas flotantes y espacios de trabajo en Linux puede variar según el entorno gráfico y el gestor de ventanas.
 
 ## Funciones
 
@@ -14,45 +67,57 @@ La aplicación está construida con Electron, React y Vite. El proyecto está pr
 - Usa `Shift` + clic izquierdo para copiar y quitar el elemento de SFNotes.
 - Haz clic derecho sobre un elemento para copiarlo, cortarlo o eliminarlo.
 - Haz clic con la rueda del ratón sobre un texto para abrir el editor.
-- Busca fragmentos por su contenido.
-- Filtra la lista por texto, enlaces o imágenes.
-- Personaliza la apariencia con temas claro, oscuro o lavanda; elige un color de acento, tamaño de texto y densidad.
-- Cambia el idioma de la interfaz entre español, inglés, francés, alemán, italiano y portugués.
-- Configura si la ventana debe iniciarse fijada y si se muestran los números de las notas.
-- Fija la ventana para mantenerla sobre otras ventanas y, cuando el sistema lo permita, mostrarla en todos los espacios de trabajo.
-- Los fragmentos se guardan automáticamente al añadir, editar o borrar; al volver a abrir la aplicación se restauran.
+- Busca fragmentos por su contenido y filtra por texto, enlaces o imágenes.
+- Personaliza la apariencia con temas claro, oscuro o lavanda, color de acento, tamaño de texto y densidad.
+- Cambia el idioma entre español, inglés, francés, alemán, italiano y portugués.
+- Fija la ventana para mantenerla encima de otras ventanas y, cuando el sistema lo permita, mostrarla en todos los espacios de trabajo.
+- Los fragmentos se guardan automáticamente y se restauran al volver a abrir la aplicación.
+
+## Cómo se publican las versiones
+
+GitHub Actions prepara automáticamente instaladores para Windows, macOS y Linux cuando se publica una etiqueta de versión con el formato `vX.Y.Z` (por ejemplo, `v0.1.0`). Para publicar una versión nueva:
+
+1. Actualiza el campo `version` de `package.json` y `package-lock.json` al mismo número, por ejemplo `0.2.0`.
+2. Confirma y sube esos cambios a la rama principal.
+3. Crea y sube la etiqueta correspondiente:
+
+   ```bash
+   git tag v0.2.0
+   git push origin v0.2.0
+   ```
+
+4. En GitHub, abre la pestaña **Actions** y espera a que termine el flujo **Build and publish release**.
+5. Abre **Releases** y comprueba que la nueva versión incluye los instaladores de los tres sistemas.
 
 ## Instalación para desarrollo
 
 Necesitas [Node.js](https://nodejs.org/) y npm. Clona el repositorio y ejecuta:
 
 ```bash
-npm install
+npm ci
 npm run desktop:dev
 ```
 
-Esto inicia Vite y abre la aplicación de escritorio con Electron. Para compilar la interfaz web:
+Para compilar y empaquetar en el sistema actual (usa el comando correspondiente):
 
 ```bash
-npm run build
+npm run dist:linux    # Linux: AppImage portátil
+npm run dist:windows  # Windows: instalador NSIS
+npm run dist:mac      # macOS: DMG y ZIP universales
 ```
 
-Para abrir la aplicación Electron después de compilar:
-
-```bash
-npm run desktop
-```
+Los archivos resultantes aparecen en `release/`. El empaquetado de macOS debe ejecutarse en macOS, y el de Windows en Windows. El flujo de GitHub Actions usa un runner nativo para cada sistema y añade también los paquetes DEB y RPM de Linux.
 
 ## Guardado de datos
 
-SFNotes guarda el contenido en un archivo `snippets.json` dentro de la carpeta de datos de la aplicación de Electron para el usuario actual. En desarrollo se usa la carpeta de datos que Electron asigna a SFNotes en ese dispositivo. El texto e imágenes guardados no se suben a GitHub ni se sincronizan entre dispositivos: el repositorio contiene el código de la aplicación.
+SFNotes guarda el contenido en `snippets.json` dentro de la carpeta de datos de la aplicación de Electron para el usuario actual. El texto e imágenes guardados no se suben a GitHub ni se sincronizan entre dispositivos: el repositorio contiene el código de la aplicación.
 
-## Compatibilidad y límites actuales
+## Compatibilidad y límites
 
 - **Windows:** la ventana puede mantenerse encima de otras ventanas. Electron no ofrece mostrarla automáticamente en todos los escritorios virtuales de Windows.
 - **macOS:** Electron permite mantenerla encima y mostrarla en todos los espacios de trabajo.
-- **Linux:** Electron ofrece fijar la ventana en todos los espacios de trabajo; el resultado depende del entorno de escritorio y del gestor de ventanas. En esta prueba con Hyprland sobre Wayland, la aplicación abrió, pero el compositor la organizó como una ventana en mosaico, ignoró el tamaño solicitado y no confirmó que se fijara en todos los espacios. En Wayland el posicionamiento y el cambio de tamaño también pueden estar restringidos.
-- El pegado admite imágenes y texto. Aún no hay gestión especializada de archivos adjuntos ni empaquetadores instalables para cada sistema.
+- **Linux:** fijarla en todos los espacios de trabajo depende del entorno de escritorio y del gestor de ventanas. En Wayland, el compositor puede restringir el posicionamiento y el tamaño de la ventana.
+- Las versiones instalables actuales son para arquitecturas x64 en Windows/Linux y universales (Intel + Apple Silicon) en macOS.
 - La función de cortar una imagen la copia al portapapeles y la quita de SFNotes; no modifica el archivo de origen.
 
 Consulta la [documentación de Electron sobre ventanas](https://www.electronjs.org/docs/latest/api/browser-window) para más detalles sobre las diferencias entre sistemas.
@@ -62,4 +127,5 @@ Consulta la [documentación de Electron sobre ventanas](https://www.electronjs.o
 - [Electron](https://www.electronjs.org/)
 - [React](https://react.dev/)
 - [Vite](https://vite.dev/)
+- [electron-builder](https://www.electron.build/)
 - [Lucide](https://lucide.dev/) para iconos
