@@ -54,11 +54,33 @@ jobs:
         if: matrix.name == 'macos'
         run: npx electron-builder --mac --publish never
 
-      - name: Upload installers
+      - name: Upload Linux installers
+        if: matrix.name == 'linux'
         uses: actions/upload-artifact@v4
         with:
-          name: sfnotes-${{ matrix.name }}
-          path: release/*
+          name: sfnotes-linux
+          path: |
+            release/*.AppImage
+            release/*.deb
+            release/*.rpm
+          if-no-files-found: error
+
+      - name: Upload Windows installer
+        if: matrix.name == 'windows'
+        uses: actions/upload-artifact@v4
+        with:
+          name: sfnotes-windows
+          path: release/*.exe
+          if-no-files-found: error
+
+      - name: Upload macOS installers
+        if: matrix.name == 'macos'
+        uses: actions/upload-artifact@v4
+        with:
+          name: sfnotes-macos
+          path: |
+            release/*.dmg
+            release/*.zip
           if-no-files-found: error
 
   publish:
