@@ -12,8 +12,13 @@ jobs:
   build:
     name: Build ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
+    permissions:
+      contents: write
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     strategy:
       fail-fast: false
+      max-parallel: 1
       matrix:
         include:
           - os: ubuntu-latest
@@ -44,62 +49,12 @@ jobs:
 
       - name: Package Linux installers
         if: matrix.name == 'linux'
-        run: npx electron-builder --linux AppImage deb rpm --publish never
+        run: npx electron-builder --linux AppImage deb rpm --publish always
 
       - name: Package Windows installer
         if: matrix.name == 'windows'
-        run: npx electron-builder --win --publish never
+        run: npx electron-builder --win --publish always
 
       - name: Package macOS installers
         if: matrix.name == 'macos'
-        run: npx electron-builder --mac --publish never
-
-      - name: Upload Linux installers
-        if: matrix.name == 'linux'
-        uses: actions/upload-artifact@v4
-        with:
-          name: sfnotes-linux
-          path: |
-            release/*.AppImage
-            release/*.deb
-            release/*.rpm
-          if-no-files-found: error
-
-      - name: Upload Windows installer
-        if: matrix.name == 'windows'
-        uses: actions/upload-artifact@v4
-        with:
-          name: sfnotes-windows
-          path: release/*.exe
-          if-no-files-found: error
-
-      - name: Upload macOS installers
-        if: matrix.name == 'macos'
-        uses: actions/upload-artifact@v4
-        with:
-          name: sfnotes-macos
-          path: |
-            release/*.dmg
-            release/*.zip
-          if-no-files-found: error
-
-  publish:
-    name: Publish GitHub Release
-    needs: build
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - name: Download installers
-        uses: actions/download-artifact@v5
-        with:
-          pattern: sfnotes-*
-          path: release
-          merge-multiple: true
-
-      - name: Create GitHub Release
-        env:
-          GH_TOKEN: ${{ github.token }}
-          GH_REPO: ${{ github.repository }}
-          TAG_NAME: ${{ github.ref_name }}
-        run: gh release create "$TAG_NAME" release/* --title "SFNotes $TAG_NAME" --generate-notes
+        run: npx electron-builder --mac --publish always

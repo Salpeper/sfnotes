@@ -6,7 +6,7 @@ La aplicación está hecha con Electron, React y Vite. Hay paquetes instalables 
 
 ## Descargar e instalar
 
-Las versiones listas para instalar están en [Releases de SFNotes](https://github.com/Salpeper/sfnotes/releases). El repositorio es privado: inicia sesión en GitHub con una cuenta que tenga acceso al repositorio para ver y descargar sus archivos.
+Las versiones listas para instalar están en [Releases de SFNotes](https://github.com/Salpeper/sfnotes/releases).
 
 ### Windows 10/11
 
@@ -61,21 +61,23 @@ Si el AppImage indica que falta FUSE, instala el paquete FUSE 2 compatible con t
 
 ## Funciones
 
-- Pega texto, enlaces o imágenes desde el portapapeles con `Ctrl+V` en Windows/Linux y `⌘V` en macOS, o usa el botón **Pegar**.
+- Pega texto, enlaces, imágenes o archivos desde el portapapeles con `Ctrl+V` en Windows/Linux y `⌘V` en macOS, o usa el botón **Pegar**.
 - Cada elemento aparece numerado y con una vista previa: texto recortado, dominio del enlace o miniatura de imagen.
 - Haz clic izquierdo para copiar un elemento al portapapeles.
 - Usa `Shift` + clic izquierdo para copiar y quitar el elemento de SFNotes.
 - Haz clic derecho sobre un elemento para copiarlo, cortarlo o eliminarlo.
-- Haz clic con la rueda del ratón sobre un texto para abrir el editor.
+- Abre el menú de una nota de texto o enlace y pulsa **Editar texto** para modificarla.
 - Busca fragmentos por su contenido y filtra por texto, enlaces o imágenes.
+- Configura desde Ajustes los atajos de pegar, buscar, capturar pantalla y añadir el portapapeles desde cualquier aplicación. En macOS, la primera captura puede requerir permiso de Grabación de pantalla.
 - Personaliza la apariencia con temas claro, oscuro o lavanda, color de acento, tamaño de texto y densidad.
 - Cambia el idioma entre español, inglés, francés, alemán, italiano y portugués.
+- SFNotes busca actualizaciones al abrirse. En **Ajustes → Actualizaciones** puedes comprobarlo manualmente; si hay una nueva versión, se descarga y puedes reiniciar para instalarla.
 - Fija la ventana para mantenerla encima de otras ventanas y, cuando el sistema lo permita, mostrarla en todos los espacios de trabajo.
 - Los fragmentos se guardan automáticamente y se restauran al volver a abrir la aplicación.
 
 ## Cómo se publican las versiones
 
-GitHub Actions prepara automáticamente instaladores para Windows, macOS y Linux cuando se publica una etiqueta de versión con el formato `vX.Y.Z` (por ejemplo, `v0.1.0`). Para publicar una versión nueva:
+GitHub Actions prepara y publica automáticamente instaladores y metadatos de actualización para Windows, macOS y Linux cuando se publica una etiqueta con el formato `vX.Y.Z` (por ejemplo, `v0.2.0`). Para publicar una versión nueva:
 
 1. Actualiza el campo `version` de `package.json` y `package-lock.json` al mismo número, por ejemplo `0.2.0`.
 2. Confirma y sube esos cambios a la rama principal.
@@ -110,12 +112,13 @@ Los archivos resultantes aparecen en `release/`. El empaquetado de macOS debe ej
 
 ## Guardado de datos
 
-SFNotes guarda el contenido en `snippets.json` dentro de la carpeta de datos de la aplicación de Electron para el usuario actual. El texto e imágenes guardados no se suben a GitHub ni se sincronizan entre dispositivos: el repositorio contiene el código de la aplicación.
+SFNotes guarda el contenido en `snippets.json` dentro de la carpeta de datos de la aplicación de Electron para el usuario actual. El texto, imágenes, enlaces y rutas locales de archivos guardados no se suben a GitHub ni se sincronizan entre dispositivos: el repositorio contiene el código de la aplicación.
 
 ## Compatibilidad y límites
 
 - **Windows:** la ventana puede mantenerse encima de otras ventanas. Electron no ofrece mostrarla automáticamente en todos los escritorios virtuales de Windows.
 - **macOS:** Electron permite mantenerla encima y mostrarla en todos los espacios de trabajo.
+- **Actualizaciones en macOS:** Apple exige que la aplicación esté firmada para instalar actualizaciones automáticas. Las compilaciones actuales aún no están firmadas ni notarizadas.
 - **Linux:** fijarla en todos los espacios de trabajo depende del entorno de escritorio y del gestor de ventanas. En Wayland, el compositor puede restringir el posicionamiento y el tamaño de la ventana.
 - Las versiones instalables actuales son para arquitecturas x64 en Windows/Linux y universales (Intel + Apple Silicon) en macOS.
 - La función de cortar una imagen la copia al portapapeles y la quita de SFNotes; no modifica el archivo de origen.

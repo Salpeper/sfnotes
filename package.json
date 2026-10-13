@@ -1,6 +1,6 @@
 {
   "name": "sfnotes",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "description": "Notas rápidas persistentes en el escritorio",
   "desktopName": "SFNotes",
@@ -36,9 +36,27 @@
     "files": [
       "dist/**/*",
       "electron/**/*",
+      "build/**/*",
       "package.json"
     ],
+    "electronLanguages": [
+      "en-US",
+      "es",
+      "fr",
+      "de",
+      "it",
+      "pt-BR",
+      "pt-PT"
+    ],
+    "publish": {
+      "provider": "github",
+      "owner": "Salpeper",
+      "repo": "sfnotes",
+      "releaseType": "release"
+    },
+    "icon": "build/icon.png",
     "mac": {
+      "icon": "build/icon.icns",
       "target": [
         {
           "target": "dmg",
@@ -56,6 +74,7 @@
       "category": "public.app-category.productivity"
     },
     "win": {
+      "icon": "build/icon.ico",
       "target": [
         {
           "target": "nsis",
@@ -70,6 +89,7 @@
       "allowToChangeInstallationDirectory": true
     },
     "linux": {
+      "icon": "build/icon.png",
       "target": [
         "AppImage",
         "deb",
@@ -79,5 +99,8 @@
       "maintainer": "Salpeper",
       "artifactName": "${productName}-${version}-${arch}.${ext}"
     }
+  },
+  "dependencies": {
+    "electron-updater": "^6.8.9"
   }
 }

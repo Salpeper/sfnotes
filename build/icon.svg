@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="64" y1="36" x2="448" y2="476" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E4C75A"/>
+      <stop offset="1" stop-color="#C5A637"/>
+    </linearGradient>
+    <filter id="shadow" x="95" y="68" width="330" height="384" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="13"/>
+      <feGaussianBlur stdDeviation="14"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix values="0 0 0 0 0.31 0 0 0 0 0.25 0 0 0 0 0.1 0 0 0 0.2 0"/>
+      <feBlend in2="BackgroundImageFix" result="effect1_dropShadow"/>
+      <feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+    </filter>
+  </defs>
+  <rect x="16" y="16" width="480" height="480" rx="112" fill="url(#bg)"/>
+  <g filter="url(#shadow)">
+    <path d="M157 105h133l82 82v207c0 13.3-10.7 24-24 24H157c-13.3 0-24-10.7-24-24V129c0-13.3 10.7-24 24-24Z" fill="#FFFDF6"/>
+    <path d="M290 105v60c0 12.2 9.8 22 22 22h60l-82-82Z" fill="#E9E4D6"/>
+    <path d="M192 229h119M192 273h119M192 317h75" stroke="#C9C2B2" stroke-width="17" stroke-linecap="round"/>
+    <path d="M322 320v63l20-13 20 13v-63" fill="#D2B344"/>
+  </g>
+</svg>
