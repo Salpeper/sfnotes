@@ -26,63 +26,63 @@ function detectLanguage() {
 
 const translations = {
   es: {
-    search: 'Buscar en todas las notas', notes: 'Notas', note: 'nota', notesPlural: 'notas', all: 'Todas', text: 'Texto', links: 'Enlaces', images: 'Imágenes', filterNotes: 'Filtrar notas', typeLink: 'Enlace', typeImage: 'Imagen', typeText: 'Texto',
+    search: 'Buscar en todas las notas', notes: 'Notas', note: 'nota', notesPlural: 'notas', all: 'Todas', text: 'Texto', links: 'Enlaces', images: 'Imágenes', files: 'Archivos', addFile: 'Añadir archivo', filterNotes: 'Filtrar notas', typeLink: 'Enlace', typeImage: 'Imagen', typeText: 'Texto',
     noMatches: 'No hay notas con ese filtro.', empty: 'Pega algo para guardarlo aquí.', copyHint: 'Pulsa para copiar', imageSaved: 'Imagen guardada', imagePasted: 'Imagen pegada',
     searchTitle: 'Buscar', pasteTitle: 'Pegar del portapapeles', moreTitle: 'Más opciones', pasteAdded: 'Añadido a Notas', nothingToPaste: 'No hay nada que pegar', clipboardError: 'No se pudo leer el portapapeles', copied: 'Copiado', cut: 'Copiado y quitado de Notas', copyError: 'No se pudo copiar', copyAction: 'Copiar', cutAction: 'Cortar', deleteAction: 'Eliminar', editAction: 'Editar texto', typeFile: 'Archivo', shiftClick: '⇧ + clic',
     pinned: 'Fijada', pin: 'Fijar en escritorio', unpin: 'Desfijar ventana', pinWindow: 'Fijar ventana', closeApp: 'Cerrar SFNotes', settings: 'Ajustes',
-    appearance: 'APARIENCIA', theme: 'Tema', light: 'Claro', dark: 'Oscuro', lavender: 'Lavanda', accent: 'Color de acento', yellow: 'Amarillo', blue: 'Azul', green: 'Verde',
+    appearance: 'APARIENCIA', theme: 'Tema', light: 'Claro', dark: 'Oscuro', lavender: 'Lavanda', accent: 'Color de resaltado', yellow: 'Amarillo', blue: 'Azul', green: 'Verde',
     reading: 'LECTURA', fontSize: 'Tamaño de texto', fontHelp: 'Elige el tamaño de las notas', small: 'Pequeño', medium: 'Medio', large: 'Grande', density: 'Densidad de notas', densityHelp: 'Espacio entre fragmentos', comfortable: 'Cómoda', compact: 'Compacta',
-    behavior: 'COMPORTAMIENTO', pinOnStart: 'Fijar al iniciar', pinHelp: 'Mantener la nota sobre otras ventanas', showNumbers: 'Mostrar numeración', numbersHelp: 'Identificar notas de un vistazo', language: 'Idioma',
+    behavior: 'COMPORTAMIENTO', pinOnStart: 'Fijar al iniciar', pinHelp: 'Mantener la nota sobre otras ventanas', showNumbers: 'Mostrar numeración', numbersHelp: 'Identificar notas de un vistazo', language: 'Idioma', shortcutsTitle: 'ATAJOS DE TECLADO', shortcutPaste: 'Guardar portapapeles en SFNotes', shortcutSearch: 'Buscar', shortcutGlobalPaste: 'Guardar portapapeles (global)', shortcutScreenshot: 'Capturar pantalla (global)', shortcutClose: 'Cerrar paneles', pressKeys: 'Pulsa teclas…', unavailable: 'No disponible', shortcutHelp: 'Los atajos globales funcionan aunque SFNotes esté en segundo plano. macOS puede pedir permiso para capturar la pantalla.',
     localData: 'Tus notas y preferencias se guardan en este dispositivo.', updates: 'ACTUALIZACIONES', checkUpdates: 'Buscar actualizaciones', checkingUpdates: 'Buscando actualizaciones…', updateAvailable: 'Actualización encontrada. Descargando…', downloadingUpdate: 'Descargando actualización: {percent} %', updateReady: 'Actualización lista para instalar', upToDate: 'Tienes la última versión', updateError: 'No se pudo comprobar si hay actualizaciones', updateUnsupported: 'Las actualizaciones estarán disponibles en la versión instalada', restartUpdate: 'Reiniciar e instalar', editNote: 'EDITAR NOTA', yourText: 'Tu texto', savedLocal: 'Guardado en este dispositivo', save: 'Guardar', changesSaved: 'Cambios guardados'
   },
   en: {
-    search: 'Search all notes', notes: 'Notes', note: 'note', notesPlural: 'notes', all: 'All', text: 'Text', links: 'Links', images: 'Images', filterNotes: 'Filter notes', typeLink: 'Link', typeImage: 'Image', typeText: 'Text',
+    search: 'Search all notes', notes: 'Notes', note: 'note', notesPlural: 'notes', all: 'All', text: 'Text', links: 'Links', images: 'Images', files: 'Files', addFile: 'Add file', filterNotes: 'Filter notes', typeLink: 'Link', typeImage: 'Image', typeText: 'Text',
     noMatches: 'No notes match this filter.', empty: 'Paste something to save it here.', copyHint: 'Click to copy', imageSaved: 'Saved image', imagePasted: 'Pasted image',
     searchTitle: 'Search', pasteTitle: 'Paste from clipboard', moreTitle: 'More options', pasteAdded: 'Added to Notes', nothingToPaste: 'Nothing to paste', clipboardError: 'Could not read clipboard', copied: 'Copied', cut: 'Copied and removed from Notes', copyError: 'Could not copy', copyAction: 'Copy', cutAction: 'Cut', deleteAction: 'Delete', editAction: 'Edit text', typeFile: 'File', shiftClick: '⇧ + click',
     pinned: 'Pinned', pin: 'Pin to desktop', unpin: 'Unpin window', pinWindow: 'Pin window', closeApp: 'Close SFNotes', settings: 'Settings',
-    appearance: 'APPEARANCE', theme: 'Theme', light: 'Light', dark: 'Dark', lavender: 'Lavender', accent: 'Accent color', yellow: 'Yellow', blue: 'Blue', green: 'Green',
+    appearance: 'APPEARANCE', theme: 'Theme', light: 'Light', dark: 'Dark', lavender: 'Lavender', accent: 'Highlight color', yellow: 'Yellow', blue: 'Blue', green: 'Green',
     reading: 'READING', fontSize: 'Text size', fontHelp: 'Choose note text size', small: 'Small', medium: 'Medium', large: 'Large', density: 'Note spacing', densityHelp: 'Space between notes', comfortable: 'Comfortable', compact: 'Compact',
-    behavior: 'BEHAVIOR', pinOnStart: 'Pin on startup', pinHelp: 'Keep the note above other windows', showNumbers: 'Show numbering', numbersHelp: 'Identify notes at a glance', language: 'Language',
+    behavior: 'BEHAVIOR', pinOnStart: 'Pin on startup', pinHelp: 'Keep the note above other windows', showNumbers: 'Show numbering', numbersHelp: 'Identify notes at a glance', language: 'Language', shortcutsTitle: 'KEYBOARD SHORTCUTS', shortcutPaste: 'Save clipboard to SFNotes', shortcutSearch: 'Search', shortcutGlobalPaste: 'Save clipboard (global)', shortcutScreenshot: 'Capture screen (global)', shortcutClose: 'Close panels', pressKeys: 'Press keys…', unavailable: 'Unavailable', shortcutHelp: 'Global shortcuts work while SFNotes is in the background. macOS may ask for permission to capture the screen.',
     localData: 'Your notes and preferences are saved on this device.', updates: 'UPDATES', checkUpdates: 'Check for updates', checkingUpdates: 'Checking for updates…', updateAvailable: 'Update found. Downloading…', downloadingUpdate: 'Downloading update: {percent}%', updateReady: 'Update ready to install', upToDate: 'You’re up to date', updateError: 'Could not check for updates', updateUnsupported: 'Updates are available in the installed version', restartUpdate: 'Restart and install', editNote: 'EDIT NOTE', yourText: 'Your text', savedLocal: 'Saved on this device', save: 'Save', changesSaved: 'Changes saved'
   },
   fr: {
-    search: 'Rechercher dans les notes', notes: 'Notes', note: 'note', notesPlural: 'notes', all: 'Toutes', text: 'Texte', links: 'Liens', images: 'Images', filterNotes: 'Filtrer les notes', typeLink: 'Lien', typeImage: 'Image', typeText: 'Texte',
+    search: 'Rechercher dans les notes', notes: 'Notes', note: 'note', notesPlural: 'notes', all: 'Toutes', text: 'Texte', links: 'Liens', images: 'Images', files: 'Fichiers', addFile: 'Ajouter un fichier', filterNotes: 'Filtrer les notes', typeLink: 'Lien', typeImage: 'Image', typeText: 'Texte',
     noMatches: 'Aucune note pour ce filtre.', empty: 'Collez un élément pour l’enregistrer ici.', copyHint: 'Cliquer pour copier', imageSaved: 'Image enregistrée', imagePasted: 'Image collée',
     searchTitle: 'Rechercher', pasteTitle: 'Coller depuis le presse-papiers', moreTitle: 'Plus d’options', pasteAdded: 'Ajouté aux notes', nothingToPaste: 'Rien à coller', clipboardError: 'Impossible de lire le presse-papiers', copied: 'Copié', cut: 'Copié et retiré des notes', copyError: 'Impossible de copier', copyAction: 'Copier', cutAction: 'Couper', deleteAction: 'Supprimer', editAction: 'Modifier le texte', typeFile: 'Fichier', shiftClick: '⇧ + clic',
     pinned: 'Épinglée', pin: 'Épingler sur le bureau', unpin: 'Désépingler la fenêtre', pinWindow: 'Épingler la fenêtre', closeApp: 'Fermer SFNotes', settings: 'Réglages',
-    appearance: 'APPARENCE', theme: 'Thème', light: 'Clair', dark: 'Sombre', lavender: 'Lavande', accent: 'Couleur d’accent', yellow: 'Jaune', blue: 'Bleu', green: 'Vert',
+    appearance: 'APPARENCE', theme: 'Thème', light: 'Clair', dark: 'Sombre', lavender: 'Lavande', accent: 'Couleur de surbrillance', yellow: 'Jaune', blue: 'Bleu', green: 'Vert',
     reading: 'LECTURE', fontSize: 'Taille du texte', fontHelp: 'Choisir la taille du texte', small: 'Petite', medium: 'Moyenne', large: 'Grande', density: 'Espacement des notes', densityHelp: 'Espace entre les notes', comfortable: 'Aéré', compact: 'Compact',
-    behavior: 'COMPORTEMENT', pinOnStart: 'Épingler au démarrage', pinHelp: 'Garder la note au-dessus des fenêtres', showNumbers: 'Afficher les numéros', numbersHelp: 'Repérer les notes rapidement', language: 'Langue',
+    behavior: 'COMPORTEMENT', pinOnStart: 'Épingler au démarrage', pinHelp: 'Garder la note au-dessus des fenêtres', showNumbers: 'Afficher les numéros', numbersHelp: 'Repérer les notes rapidement', language: 'Langue', shortcutsTitle: 'RACCOURCIS CLAVIER', shortcutPaste: 'Enregistrer le presse-papiers dans SFNotes', shortcutSearch: 'Rechercher', shortcutGlobalPaste: 'Enregistrer le presse-papiers (global)', shortcutScreenshot: 'Capturer l’écran (global)', shortcutClose: 'Fermer les panneaux', pressKeys: 'Appuyez sur des touches…', unavailable: 'Indisponible', shortcutHelp: 'Les raccourcis globaux fonctionnent lorsque SFNotes est en arrière-plan. macOS peut demander l’autorisation de capturer l’écran.',
     localData: 'Vos notes et préférences sont enregistrées sur cet appareil.', updates: 'MISES À JOUR', checkUpdates: 'Rechercher des mises à jour', checkingUpdates: 'Recherche des mises à jour…', updateAvailable: 'Mise à jour trouvée. Téléchargement…', downloadingUpdate: 'Téléchargement : {percent} %', updateReady: 'Mise à jour prête à installer', upToDate: 'Vous avez la dernière version', updateError: 'Impossible de rechercher des mises à jour', updateUnsupported: 'Les mises à jour sont disponibles dans la version installée', restartUpdate: 'Redémarrer et installer', editNote: 'MODIFIER LA NOTE', yourText: 'Votre texte', savedLocal: 'Enregistré sur cet appareil', save: 'Enregistrer', changesSaved: 'Modifications enregistrées'
   },
   de: {
-    search: 'Notizen durchsuchen', notes: 'Notizen', note: 'Notiz', notesPlural: 'Notizen', all: 'Alle', text: 'Text', links: 'Links', images: 'Bilder', filterNotes: 'Notizen filtern', typeLink: 'Link', typeImage: 'Bild', typeText: 'Text',
+    search: 'Notizen durchsuchen', notes: 'Notizen', note: 'Notiz', notesPlural: 'Notizen', all: 'Alle', text: 'Text', links: 'Links', images: 'Bilder', files: 'Dateien', addFile: 'Datei hinzufügen', filterNotes: 'Notizen filtern', typeLink: 'Link', typeImage: 'Bild', typeText: 'Text',
     noMatches: 'Keine Notizen für diesen Filter.', empty: 'Füge etwas ein, um es hier zu speichern.', copyHint: 'Zum Kopieren klicken', imageSaved: 'Gespeichertes Bild', imagePasted: 'Eingefügtes Bild',
     searchTitle: 'Suchen', pasteTitle: 'Aus Zwischenablage einfügen', moreTitle: 'Weitere Optionen', pasteAdded: 'Zu Notizen hinzugefügt', nothingToPaste: 'Nichts zum Einfügen', clipboardError: 'Zwischenablage konnte nicht gelesen werden', copied: 'Kopiert', cut: 'Kopiert und aus Notizen entfernt', copyError: 'Kopieren nicht möglich', copyAction: 'Kopieren', cutAction: 'Ausschneiden', deleteAction: 'Löschen', editAction: 'Text bearbeiten', typeFile: 'Datei', shiftClick: '⇧ + Klick',
     pinned: 'Angeheftet', pin: 'Am Desktop anheften', unpin: 'Fenster lösen', pinWindow: 'Fenster anheften', closeApp: 'SFNotes schließen', settings: 'Einstellungen',
-    appearance: 'ERSCHEINUNGSBILD', theme: 'Design', light: 'Hell', dark: 'Dunkel', lavender: 'Lavendel', accent: 'Akzentfarbe', yellow: 'Gelb', blue: 'Blau', green: 'Grün',
+    appearance: 'ERSCHEINUNGSBILD', theme: 'Design', light: 'Hell', dark: 'Dunkel', lavender: 'Lavendel', accent: 'Hervorhebungsfarbe', yellow: 'Gelb', blue: 'Blau', green: 'Grün',
     reading: 'LESEN', fontSize: 'Textgröße', fontHelp: 'Textgröße der Notizen wählen', small: 'Klein', medium: 'Mittel', large: 'Groß', density: 'Notizabstand', densityHelp: 'Abstand zwischen Notizen', comfortable: 'Locker', compact: 'Kompakt',
-    behavior: 'VERHALTEN', pinOnStart: 'Beim Start anheften', pinHelp: 'Notiz über anderen Fenstern halten', showNumbers: 'Nummerierung anzeigen', numbersHelp: 'Notizen schnell erkennen', language: 'Sprache',
+    behavior: 'VERHALTEN', pinOnStart: 'Beim Start anheften', pinHelp: 'Notiz über anderen Fenstern halten', showNumbers: 'Nummerierung anzeigen', numbersHelp: 'Notizen schnell erkennen', language: 'Sprache', shortcutsTitle: 'TASTATURKÜRZEL', shortcutPaste: 'Zwischenablage in SFNotes speichern', shortcutSearch: 'Suchen', shortcutGlobalPaste: 'Zwischenablage speichern (global)', shortcutScreenshot: 'Bildschirm aufnehmen (global)', shortcutClose: 'Fenster schließen', pressKeys: 'Tasten drücken…', unavailable: 'Nicht verfügbar', shortcutHelp: 'Globale Tastenkürzel funktionieren, während SFNotes im Hintergrund läuft. macOS kann um Erlaubnis zur Bildschirmaufnahme bitten.',
     localData: 'Notizen und Einstellungen werden auf diesem Gerät gespeichert.', updates: 'UPDATES', checkUpdates: 'Nach Updates suchen', checkingUpdates: 'Suche nach Updates…', updateAvailable: 'Update gefunden. Wird heruntergeladen…', downloadingUpdate: 'Update wird geladen: {percent} %', updateReady: 'Update kann installiert werden', upToDate: 'Du bist auf dem neuesten Stand', updateError: 'Updates konnten nicht gesucht werden', updateUnsupported: 'Updates sind in der installierten Version verfügbar', restartUpdate: 'Neu starten und installieren', editNote: 'NOTIZ BEARBEITEN', yourText: 'Dein Text', savedLocal: 'Auf diesem Gerät gespeichert', save: 'Speichern', changesSaved: 'Änderungen gespeichert'
   },
   it: {
-    search: 'Cerca in tutte le note', notes: 'Note', note: 'nota', notesPlural: 'note', all: 'Tutte', text: 'Testo', links: 'Link', images: 'Immagini', filterNotes: 'Filtra le note', typeLink: 'Link', typeImage: 'Immagine', typeText: 'Testo',
+    search: 'Cerca in tutte le note', notes: 'Note', note: 'nota', notesPlural: 'note', all: 'Tutte', text: 'Testo', links: 'Link', images: 'Immagini', files: 'File', addFile: 'Aggiungi file', filterNotes: 'Filtra le note', typeLink: 'Link', typeImage: 'Immagine', typeText: 'Testo',
     noMatches: 'Nessuna nota per questo filtro.', empty: 'Incolla qualcosa per salvarlo qui.', copyHint: 'Fai clic per copiare', imageSaved: 'Immagine salvata', imagePasted: 'Immagine incollata',
     searchTitle: 'Cerca', pasteTitle: 'Incolla dagli appunti', moreTitle: 'Altre opzioni', pasteAdded: 'Aggiunto alle Note', nothingToPaste: 'Niente da incollare', clipboardError: 'Impossibile leggere gli appunti', copied: 'Copiato', cut: 'Copiato e rimosso dalle Note', copyError: 'Impossibile copiare', copyAction: 'Copia', cutAction: 'Taglia', deleteAction: 'Elimina', editAction: 'Modifica testo', typeFile: 'File', shiftClick: '⇧ + clic',
     pinned: 'Fissata', pin: 'Fissa sul desktop', unpin: 'Sblocca finestra', pinWindow: 'Fissa finestra', closeApp: 'Chiudi SFNotes', settings: 'Impostazioni',
-    appearance: 'ASPETTO', theme: 'Tema', light: 'Chiaro', dark: 'Scuro', lavender: 'Lavanda', accent: 'Colore principale', yellow: 'Giallo', blue: 'Blu', green: 'Verde',
+    appearance: 'ASPETTO', theme: 'Tema', light: 'Chiaro', dark: 'Scuro', lavender: 'Lavanda', accent: 'Colore di evidenziazione', yellow: 'Giallo', blue: 'Blu', green: 'Verde',
     reading: 'LETTURA', fontSize: 'Dimensione testo', fontHelp: 'Scegli la dimensione del testo', small: 'Piccolo', medium: 'Medio', large: 'Grande', density: 'Spaziatura note', densityHelp: 'Spazio tra le note', comfortable: 'Ampia', compact: 'Compatta',
-    behavior: 'COMPORTAMENTO', pinOnStart: 'Fissa all’avvio', pinHelp: 'Mantieni la nota sopra le altre finestre', showNumbers: 'Mostra numerazione', numbersHelp: 'Riconosci le note a colpo d’occhio', language: 'Lingua',
+    behavior: 'COMPORTAMENTO', pinOnStart: 'Fissa all’avvio', pinHelp: 'Mantieni la nota sopra le altre finestre', showNumbers: 'Mostra numerazione', numbersHelp: 'Riconosci le note a colpo d’occhio', language: 'Lingua', shortcutsTitle: 'SCORCIATOIE DA TASTIERA', shortcutPaste: 'Salva gli appunti in SFNotes', shortcutSearch: 'Cerca', shortcutGlobalPaste: 'Salva gli appunti (globale)', shortcutScreenshot: 'Cattura schermo (globale)', shortcutClose: 'Chiudi pannelli', pressKeys: 'Premi i tasti…', unavailable: 'Non disponibile', shortcutHelp: 'Le scorciatoie globali funzionano anche quando SFNotes è in background. macOS potrebbe chiedere il permesso di catturare lo schermo.',
     localData: 'Note e preferenze sono salvate su questo dispositivo.', updates: 'AGGIORNAMENTI', checkUpdates: 'Cerca aggiornamenti', checkingUpdates: 'Ricerca aggiornamenti…', updateAvailable: 'Aggiornamento trovato. Download…', downloadingUpdate: 'Download aggiornamento: {percent} %', updateReady: 'Aggiornamento pronto da installare', upToDate: 'È già installata la versione più recente', updateError: 'Impossibile cercare aggiornamenti', updateUnsupported: 'Gli aggiornamenti sono disponibili nella versione installata', restartUpdate: 'Riavvia e installa', editNote: 'MODIFICA NOTA', yourText: 'Il tuo testo', savedLocal: 'Salvato su questo dispositivo', save: 'Salva', changesSaved: 'Modifiche salvate'
   },
   pt: {
-    search: 'Pesquisar em todas as notas', notes: 'Notas', note: 'nota', notesPlural: 'notas', all: 'Todas', text: 'Texto', links: 'Links', images: 'Imagens', filterNotes: 'Filtrar notas', typeLink: 'Link', typeImage: 'Imagem', typeText: 'Texto',
+    search: 'Pesquisar em todas as notas', notes: 'Notas', note: 'nota', notesPlural: 'notas', all: 'Todas', text: 'Texto', links: 'Links', images: 'Imagens', files: 'Ficheiros', addFile: 'Adicionar ficheiro', filterNotes: 'Filtrar notas', typeLink: 'Link', typeImage: 'Imagem', typeText: 'Texto',
     noMatches: 'Nenhuma nota neste filtro.', empty: 'Cole algo para guardar aqui.', copyHint: 'Clique para copiar', imageSaved: 'Imagem guardada', imagePasted: 'Imagem colada',
     searchTitle: 'Pesquisar', pasteTitle: 'Colar da área de transferência', moreTitle: 'Mais opções', pasteAdded: 'Adicionado às Notas', nothingToPaste: 'Nada para colar', clipboardError: 'Não foi possível ler a área de transferência', copied: 'Copiado', cut: 'Copiado e removido das Notas', copyError: 'Não foi possível copiar', copyAction: 'Copiar', cutAction: 'Cortar', deleteAction: 'Eliminar', editAction: 'Editar texto', typeFile: 'Ficheiro', shiftClick: '⇧ + clique',
     pinned: 'Fixada', pin: 'Fixar no ambiente de trabalho', unpin: 'Desafixar janela', pinWindow: 'Fixar janela', closeApp: 'Fechar SFNotes', settings: 'Definições',
-    appearance: 'APARÊNCIA', theme: 'Tema', light: 'Claro', dark: 'Escuro', lavender: 'Lavanda', accent: 'Cor de destaque', yellow: 'Amarelo', blue: 'Azul', green: 'Verde',
+    appearance: 'APARÊNCIA', theme: 'Tema', light: 'Claro', dark: 'Escuro', lavender: 'Lavanda', accent: 'Cor de realce', yellow: 'Amarelo', blue: 'Azul', green: 'Verde',
     reading: 'LEITURA', fontSize: 'Tamanho do texto', fontHelp: 'Escolha o tamanho do texto', small: 'Pequeno', medium: 'Médio', large: 'Grande', density: 'Espaçamento das notas', densityHelp: 'Espaço entre notas', comfortable: 'Confortável', compact: 'Compacto',
-    behavior: 'COMPORTAMENTO', pinOnStart: 'Fixar ao iniciar', pinHelp: 'Manter a nota sobre outras janelas', showNumbers: 'Mostrar numeração', numbersHelp: 'Identificar notas rapidamente', language: 'Idioma',
+    behavior: 'COMPORTAMENTO', pinOnStart: 'Fixar ao iniciar', pinHelp: 'Manter a nota sobre outras janelas', showNumbers: 'Mostrar numeração', numbersHelp: 'Identificar notas rapidamente', language: 'Idioma', shortcutsTitle: 'ATALHOS DE TECLADO', shortcutPaste: 'Guardar área de transferência no SFNotes', shortcutSearch: 'Pesquisar', shortcutGlobalPaste: 'Guardar área de transferência (global)', shortcutScreenshot: 'Capturar ecrã (global)', shortcutClose: 'Fechar painéis', pressKeys: 'Prima as teclas…', unavailable: 'Indisponível', shortcutHelp: 'Os atalhos globais funcionam quando o SFNotes está em segundo plano. O macOS poderá pedir autorização para capturar o ecrã.',
     localData: 'As notas e preferências ficam guardadas neste dispositivo.', updates: 'ATUALIZAÇÕES', checkUpdates: 'Procurar atualizações', checkingUpdates: 'A procurar atualizações…', updateAvailable: 'Atualização encontrada. A transferir…', downloadingUpdate: 'A transferir atualização: {percent} %', updateReady: 'Atualização pronta para instalar', upToDate: 'Tem a versão mais recente', updateError: 'Não foi possível procurar atualizações', updateUnsupported: 'As atualizações estão disponíveis na versão instalada', restartUpdate: 'Reiniciar e instalar', editNote: 'EDITAR NOTA', yourText: 'O seu texto', savedLocal: 'Guardado neste dispositivo', save: 'Guardar', changesSaved: 'Alterações guardadas'
   }
 };
@@ -207,6 +207,11 @@ function App() {
     notify(t.pasteAdded);
   };
 
+  const addFiles = async () => {
+    const paths = await window.sfnotes?.chooseFiles();
+    paths?.forEach((file) => add('file', file));
+  };
+
   const paste = async () => {
     try {
       const clip = window.sfnotes ? await window.sfnotes.readClipboard() : null;
@@ -288,7 +293,7 @@ function App() {
         <label className="search-field"><Search size={15} /><input ref={searchRef} value={query} onChange={(event) => setQuery(event.target.value)} placeholder={t.search} /><kbd>{searchShortcut}</kbd></label>
         <div className="section-heading"><h1>{t.notes}</h1><span>{items.length} {items.length === 1 ? t.note : t.notesPlural}</span></div>
         <nav className="filters" aria-label={t.filterNotes}>
-          {[['all', t.all], ['text', t.text], ['url', t.links], ['image', t.images]].map(([value, label]) => (
+          {[['all', t.all], ['text', t.text], ['url', t.links], ['image', t.images], ['file', t.files]].map(([value, label]) => (
             <button key={value} className={filter === value ? 'selected' : ''} onClick={() => setFilter(value)}>{label}</button>
           ))}
         </nav>
@@ -334,6 +339,7 @@ function App() {
       </footer>
 
       {appMenu && <div className="app-menu" onClick={(event) => event.stopPropagation()}>
+        <button onClick={() => { addFiles(); setAppMenu(false); }}><FileIcon size={14} /> {t.addFile}</button>
         <button onClick={() => { togglePin(); setAppMenu(false); }}>{pinned ? <PinOff size={14} /> : <Pin size={14} />}{pinned ? t.unpin : t.pinWindow}</button>
         <button onClick={() => { setSettingsOpen(true); setAppMenu(false); }}><SettingsIcon size={14} /> {t.settings}</button>
         <button onClick={() => window.sfnotes?.close()}><X size={14} /> {t.closeApp}</button>
@@ -380,17 +386,17 @@ function App() {
             <button className="toggle-row" onClick={() => { const next = !settings.pinOnStart; setPreference('pinOnStart', next); setPinned(next); window.sfnotes?.setPinned(next); }}><span><b>{t.pinOnStart}</b><small>{t.pinHelp}</small></span><i className={`switch ${settings.pinOnStart ? 'on' : ''}`} /></button>
             <button className="toggle-row" onClick={() => setPreference('showNumbers', !settings.showNumbers)}><span><b>{t.showNumbers}</b><small>{t.numbersHelp}</small></span><i className={`switch ${settings.showNumbers ? 'on' : ''}`} /></button>
             <div className="settings-divider" />
-            <p className="settings-label">ATAJOS DE TECLADO</p>
+            <p className="settings-label">{t.shortcutsTitle}</p>
             <div className="shortcut-list">
               {[
-                ['paste', 'Guardar portapapeles en SFNotes'], ['search', 'Buscar'],
-                ['globalPaste', 'Guardar portapapeles (global)'], ['screenshot', 'Capturar pantalla (global)'], ['close', 'Cerrar paneles']
+                ['paste', t.shortcutPaste], ['search', t.shortcutSearch],
+                ['globalPaste', t.shortcutGlobalPaste], ['screenshot', t.shortcutScreenshot], ['close', t.shortcutClose]
               ].map(([key, label]) => <div className="shortcut-row" key={key}>
-                <span>{label}{(key === 'globalPaste' || key === 'screenshot') && globalShortcutStatus[key === 'globalPaste' ? 'paste' : key] === false && <small className="shortcut-error"> · No disponible</small>}</span>
-                <button onClick={() => setRecordingShortcut(key)}>{recordingShortcut === key ? 'Pulsa teclas…' : settings.shortcuts[key].replace('CommandOrControl', navigator.platform.includes('Mac') ? '⌘' : 'Ctrl')}</button>
+                <span>{label}{(key === 'globalPaste' || key === 'screenshot') && globalShortcutStatus[key === 'globalPaste' ? 'paste' : key] === false && <small className="shortcut-error"> · {t.unavailable}</small>}</span>
+                <button onClick={() => setRecordingShortcut(key)}>{recordingShortcut === key ? t.pressKeys : settings.shortcuts[key].replace('CommandOrControl', navigator.platform.includes('Mac') ? '⌘' : 'Ctrl')}</button>
               </div>)}
             </div>
-            <p className="settings-note">Los atajos globales funcionan aunque SFNotes esté en segundo plano. macOS puede pedir permiso para capturar la pantalla.</p>
+            <p className="settings-note">{t.shortcutHelp}</p>
             <p className="settings-label">{t.updates}</p>
             <div className="setting-row update-row">
               <div><b>{t.checkUpdates}</b><span>{updateStatus.status === 'checking' ? t.checkingUpdates : updateStatus.status === 'available' ? t.updateAvailable : updateStatus.status === 'downloading' ? t.downloadingUpdate.replace('{percent}', updateStatus.percent) : updateStatus.status === 'downloaded' ? t.updateReady : updateStatus.status === 'not-available' ? t.upToDate : updateStatus.status === 'error' ? t.updateError : updateStatus.status === 'unsupported' ? t.updateUnsupported : ''}</span></div>

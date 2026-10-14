@@ -1,4 +1,4 @@
-const { app, BrowserWindow, ipcMain, clipboard, nativeImage, screen, globalShortcut, desktopCapturer } = require('electron');
+const { app, BrowserWindow, ipcMain, clipboard, nativeImage, screen, globalShortcut, desktopCapturer, dialog } = require('electron');
 const path = require('node:path');
 const fs = require('node:fs');
 
@@ -120,6 +120,10 @@ ipcMain.handle('clipboard:write', async (_event, item) => {
     return;
   }
   await clipboard.writeText(item.value);
+});
+ipcMain.handle('files:choose', async () => {
+  const result = await dialog.showOpenDialog(win, { properties: ['openFile', 'multiSelections'] });
+  return result.canceled ? [] : result.filePaths;
 });
 const dataFile = () => path.join(app.getPath('userData'), 'snippets.json');
 ipcMain.handle('data:read', () => {

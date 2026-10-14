@@ -2,6 +2,7 @@ const { contextBridge, ipcRenderer } = require('electron');
 contextBridge.exposeInMainWorld('sfnotes', {
   readClipboard: () => ipcRenderer.invoke('clipboard:read'),
   writeClipboard: (item) => ipcRenderer.invoke('clipboard:write', item),
+  chooseFiles: () => ipcRenderer.invoke('files:choose'),
   readItems: () => ipcRenderer.invoke('data:read'),
   saveItems: (items) => ipcRenderer.invoke('data:write', items),
   setShortcuts: (shortcuts) => ipcRenderer.invoke('shortcuts:set', shortcuts),

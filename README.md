@@ -1,6 +1,6 @@
 # SFNotes
 
-SFNotes es una nota flotante para guardar textos, enlaces e imágenes en el escritorio. Los elementos se numeran y muestran una vista previa para que puedas encontrar y volver a copiar lo que necesitas. El contenido se guarda automáticamente en el dispositivo.
+SFNotes es una nota flotante para guardar textos, enlaces, imágenes y archivos en el escritorio. Los elementos se numeran y muestran una vista previa para que puedas encontrar y volver a copiar lo que necesitas. El contenido se guarda automáticamente en el dispositivo.
 
 La aplicación está hecha con Electron, React y Vite. Hay paquetes instalables para Windows, macOS y Linux (x64). En Linux se publican AppImage, DEB y RPM para cubrir la mayoría de distribuciones.
 
@@ -61,13 +61,13 @@ Si el AppImage indica que falta FUSE, instala el paquete FUSE 2 compatible con t
 
 ## Funciones
 
-- Pega texto, enlaces, imágenes o archivos desde el portapapeles con `Ctrl+V` en Windows/Linux y `⌘V` en macOS, o usa el botón **Pegar**.
+- Pega texto, enlaces, imágenes o archivos desde el portapapeles con `Ctrl+V` en Windows/Linux y `⌘V` en macOS, o usa el botón **Pegar**. También puedes añadir archivos desde el menú de opciones.
 - Cada elemento aparece numerado y con una vista previa: texto recortado, dominio del enlace o miniatura de imagen.
 - Haz clic izquierdo para copiar un elemento al portapapeles.
 - Usa `Shift` + clic izquierdo para copiar y quitar el elemento de SFNotes.
 - Haz clic derecho sobre un elemento para copiarlo, cortarlo o eliminarlo.
 - Abre el menú de una nota de texto o enlace y pulsa **Editar texto** para modificarla.
-- Busca fragmentos por su contenido y filtra por texto, enlaces o imágenes.
+- Busca fragmentos por su contenido y filtra por texto, enlaces, imágenes o archivos.
 - Configura desde Ajustes los atajos de pegar, buscar, capturar pantalla y añadir el portapapeles desde cualquier aplicación. En macOS, la primera captura puede requerir permiso de Grabación de pantalla.
 - Personaliza la apariencia con temas claro, oscuro o lavanda, color de acento, tamaño de texto y densidad.
 - Cambia el idioma entre español, inglés, francés, alemán, italiano y portugués.
