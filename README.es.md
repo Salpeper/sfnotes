@@ -47,15 +47,45 @@ chmod +x SFNotes-*.AppImage
 
 Si AppImage indica que falta FUSE, instala un paquete compatible con FUSE 2 o usa el paquete DEB/RPM de tu distribución. El comportamiento de ventanas flotantes y escritorios depende del entorno gráfico y el gestor de ventanas.
 
-## Cómo utilizar SFNotes
+## Manual de uso completo
 
-1. **Guarda algo:** copia un texto, enlace o imagen y pulsa `Ctrl+V` (Windows/Linux) o `⌘V` (macOS), o pulsa el botón **+**. Usa el menú **…** para añadir archivos.
-2. **Encuéntralo:** busca por contenido en el campo de búsqueda o filtra con **Todas**, **Texto**, **Enlaces**, **Imágenes** o **Archivos**.
-3. **Cópialo:** haz clic en una nota para copiarla al portapapeles. Mantén `Shift` mientras haces clic para copiarla y quitarla de SFNotes.
-4. **Gestiona una nota:** haz clic derecho (o pulsa su menú **⋮**) para copiar, cortar o eliminarla. Desde ese menú también puedes editar textos y enlaces.
-5. **Personaliza la aplicación:** abre **Ajustes** abajo a la derecha para cambiar el tema, el color de resaltado, el tamaño del texto, el espacio entre notas, el idioma y los atajos. También puedes mantener la ventana encima de otras y activar la numeración.
+Este manual aparece después de las instrucciones de descarga e instalación para que puedas instalar SFNotes primero y consultar después todas sus funciones.
 
-En Ajustes puedes configurar atajos globales para guardar el portapapeles y capturar la pantalla, incluso cuando SFNotes está en segundo plano. macOS puede pedir permiso de Grabación de pantalla la primera vez.
+### Añadir textos, enlaces, imágenes y archivos
+
+- **Textos y enlaces:** copia un texto o una dirección web desde cualquier aplicación y pulsa `Ctrl+V` en Windows/Linux o `⌘V` en macOS. SFNotes reconoce las direcciones web y las muestra como enlaces. También puedes pulsar el botón **+** para guardar lo que haya en el portapapeles.
+- **Imágenes:** copia una imagen y pégala con el mismo atajo o con el botón **+**. SFNotes guarda una vista previa y permite volver a copiarla.
+- **Archivos:** abre el menú **…** de la esquina superior derecha y elige **Añadir archivo**. Puedes seleccionar uno o varios. Copiar archivos al portapapeles y pegarlos también puede funcionar según el sistema operativo.
+- **Capturas de pantalla:** configura el atajo global de captura en **Ajustes → Atajos de teclado**. El predeterminado es `Ctrl+Shift+S` en Windows/Linux y `⌘⇧S` en macOS. Selecciona el área que quieras capturar y la imagen se añadirá a las notas. macOS puede pedir permiso de Grabación de pantalla.
+- **Atajo global del portapapeles:** permite guardar lo que haya copiado aunque SFNotes esté en segundo plano. Se configura en **Ajustes → Atajos de teclado**; el predeterminado es `Ctrl+Shift+V` o `⌘⇧V`.
+
+### Buscar y copiar elementos
+
+- Escribe en el campo de búsqueda para encontrar contenido. Pulsa `Ctrl+F` o `⌘F` para enfocarlo.
+- Filtra con **Todas**, **Texto**, **Enlaces**, **Imágenes** y **Archivos**. La búsqueda y los filtros se combinan.
+- Haz clic en una nota para copiar su contenido al portapapeles. En una nota de archivo se copia la referencia al archivo; en una imagen, se copia la imagen.
+- Mantén `Shift` mientras haces clic para copiar el elemento y quitarlo de la lista.
+
+### Editar y organizar notas
+
+- Haz clic derecho en una nota o pulsa su botón **⋮** para abrir las acciones. Puedes **Copiar**, **Cortar** o **Eliminar**. **Cortar** copia el contenido y elimina la nota de SFNotes.
+- Elige **Editar texto** en el menú para modificar una nota de texto o un enlace; después, guarda los cambios. También puedes hacer clic con el botón central sobre estas notas para abrir el editor.
+- El botón **…** de la barra superior contiene acciones de la aplicación: **Añadir archivo**, opciones para fijar la ventana, **Ajustes** y **Cerrar SFNotes**.
+- Las notas aparecen numeradas de forma predeterminada. Puedes desactivar la numeración en Ajustes.
+
+### Cambiar la apariencia y el comportamiento
+
+Abre **Ajustes** abajo a la derecha para:
+
+- Elegir el tema claro, oscuro o lavanda y el color de resaltado amarillo, azul o verde.
+- Cambiar el tamaño del texto y el espacio entre notas.
+- Elegir español, inglés, francés, alemán, italiano o portugués.
+- Decidir si SFNotes se mantiene encima de otras ventanas y si se fija al iniciar.
+- Activar o desactivar la numeración.
+- Cambiar los atajos para pegar, buscar, guardar el portapapeles globalmente, capturar la pantalla y cerrar paneles. Los atajos globales funcionan con SFNotes en segundo plano; el sistema operativo puede reservar algunas combinaciones.
+- Buscar actualizaciones en **Ajustes → Actualizaciones**. Las versiones instaladas las buscan al abrirse; cuando haya una actualización lista, pulsa **Reiniciar e instalar**.
+
+SFNotes guarda automáticamente tus notas y preferencias en este dispositivo. Cerrar la ventana no elimina tus notas.
 
 ## Funciones
 

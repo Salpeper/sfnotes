@@ -47,15 +47,45 @@ chmod +x SFNotes-*.AppImage
 
 If AppImage reports that FUSE is missing, install a compatible FUSE 2 package or use the DEB/RPM package for your distribution. Floating-window and workspace behavior on Linux depends on your desktop environment and window manager.
 
-## How to use SFNotes
+## Complete user guide
 
-1. **Save something:** copy text, a link, or an image and press `Ctrl+V` (Windows/Linux) or `⌘V` (macOS), or click the **+** button. Use the **…** menu to add files.
-2. **Find it:** use the search field to search note contents, or choose **All**, **Text**, **Links**, **Images**, or **Files** to filter the list.
-3. **Copy it back:** click a note to copy it to the clipboard. Hold `Shift` while clicking to copy and remove it from SFNotes.
-4. **Manage a note:** right-click a note (or use its **⋮** menu) to copy, cut, or delete it. Text and link notes can also be edited from this menu.
-5. **Make SFNotes yours:** open **Settings** at the bottom right to change the theme, accent color, text size, note spacing, language, and keyboard shortcuts. You can also choose whether the window stays on top and whether notes are numbered.
+The guide is below the download and installation instructions so you can install SFNotes first and then follow each feature in the app.
 
-You can set global shortcuts for saving clipboard contents and capturing the screen in Settings. They work while SFNotes is in the background. macOS may ask for screen-recording permission the first time you capture the screen.
+### Add text, links, images, and files
+
+- **Text and links:** copy text or a web address in any app, then press `Ctrl+V` on Windows/Linux or `⌘V` on macOS. SFNotes recognizes web addresses and labels them as links. You can also click the **+** button to save the current clipboard contents.
+- **Images:** copy an image and paste it with the same shortcut or **+** button. SFNotes stores a preview and lets you copy the image back later.
+- **Files:** use the **…** menu in the top right and choose **Add file**. You can select one or several files. Copying files to the clipboard and pasting them may also work depending on the operating system.
+- **Screen captures:** configure the global screen-capture shortcut in **Settings → Keyboard Shortcuts**. The default is `Ctrl+Shift+S` on Windows/Linux and `⌘⇧S` on macOS. Select the area to capture; the resulting image is added to your notes. macOS may request Screen Recording permission.
+- **Global clipboard shortcut:** the global save-clipboard shortcut can add the current clipboard while SFNotes is in the background. Configure it in **Settings → Keyboard Shortcuts**; the default is `Ctrl+Shift+V` or `⌘⇧V`.
+
+### Find and copy saved items
+
+- Type into the search field to find matching content in your notes. Press `Ctrl+F` or `⌘F` to focus it.
+- Use **All**, **Text**, **Links**, **Images**, and **Files** to filter the list by content type. Search and filters work together.
+- Click a note to copy its contents to the clipboard. For a file note, SFNotes copies the file reference; for an image, it copies the image.
+- Hold `Shift` while clicking a note to copy it and remove it from the list.
+
+### Edit and organize notes
+
+- Right-click a note or click its **⋮** button to open its actions. Choose **Copy**, **Cut**, or **Delete**. **Cut** copies the content and removes the note from SFNotes.
+- Choose **Edit text** in the menu for a text or link note, make your changes, then save them. You can also middle-click a text or link note to open the editor.
+- The **…** button in the top bar opens app actions, including **Add file**, pin controls, **Settings**, and **Close SFNotes**.
+- Notes are numbered in the list by default. Turn numbering off in Settings if you prefer.
+
+### Change the appearance and behavior
+
+Open **Settings** at the bottom right to:
+
+- Choose the light, dark, or lavender theme and a yellow, blue, or green accent color.
+- Set text size and the spacing between notes.
+- Choose English, Spanish, French, German, Italian, or Portuguese.
+- Decide whether to keep SFNotes above other windows, including whether it should pin on startup.
+- Turn note numbering on or off.
+- Change shortcuts for pasting, searching, global clipboard saving, screen capture, and closing panels. Global shortcuts work while SFNotes is in the background; the operating system may reserve some combinations.
+- Check for updates in **Settings → Updates**. Installed versions check at startup; when an update is ready, use **Restart and install**.
+
+SFNotes saves notes and preferences automatically on this device. Closing the window does not delete your notes.
 
 ## Features
 

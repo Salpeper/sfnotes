@@ -47,15 +47,45 @@ chmod +x SFNotes-*.AppImage
 
 Wenn AppImage meldet, dass FUSE fehlt, installiere ein kompatibles FUSE-2-Paket oder verwende das DEB/RPM-Paket deiner Distribution. Das Verhalten schwebender Fenster und Arbeitsflächen hängt von der Desktopumgebung und dem Fenstermanager ab.
 
-## SFNotes verwenden
+## Vollständige Anleitung
 
-1. **Etwas speichern:** Kopiere Text, einen Link oder ein Bild und drücke `Ctrl+V` (Windows/Linux) oder `⌘V` (macOS), oder klicke auf **+**. Über das Menü **…** kannst du Dateien hinzufügen.
-2. **Wiederfinden:** Suche im Suchfeld oder filtere nach **Alle**, **Text**, **Links**, **Bilder** oder **Dateien**.
-3. **Kopieren:** Klicke auf eine Notiz, um sie in die Zwischenablage zu kopieren. Halte beim Klicken `Shift` gedrückt, um sie zu kopieren und aus SFNotes zu entfernen.
-4. **Notizen verwalten:** Rechtsklick (oder Menü **⋮**) bietet Kopieren, Ausschneiden und Löschen. Text- und Linknotizen lassen sich dort auch bearbeiten.
-5. **Anpassen:** Öffne **Einstellungen** unten rechts, um Design, Akzentfarbe, Textgröße, Notizabstand, Sprache und Tastenkürzel festzulegen. Dort kannst du auch das Fenster im Vordergrund halten und die Nummerierung ein- oder ausschalten.
+Diese Anleitung steht nach dem Download- und Installationsabschnitt, damit du SFNotes zuerst einrichten und anschließend alle Funktionen kennenlernen kannst.
 
-In den Einstellungen kannst du globale Tastenkürzel zum Speichern der Zwischenablage und für Bildschirmaufnahmen festlegen. Sie funktionieren auch, wenn SFNotes im Hintergrund läuft. macOS fragt bei der ersten Bildschirmaufnahme eventuell nach einer Berechtigung.
+### Texte, Links, Bilder und Dateien hinzufügen
+
+- **Texte und Links:** Kopiere Text oder eine Webadresse aus einer beliebigen App und drücke unter Windows/Linux `Ctrl+V` oder unter macOS `⌘V`. SFNotes erkennt Webadressen automatisch als Links. Mit **+** speicherst du ebenfalls den aktuellen Inhalt der Zwischenablage.
+- **Bilder:** Kopiere ein Bild und füge es mit derselben Tastenkombination oder über **+** ein. SFNotes speichert eine Vorschau und kann das Bild später wieder kopieren.
+- **Dateien:** Öffne das Menü **…** oben rechts und wähle **Datei hinzufügen**. Du kannst eine oder mehrere Dateien auswählen. Das Einfügen kopierter Dateien kann je nach Betriebssystem ebenfalls funktionieren.
+- **Bildschirmaufnahmen:** Lege das globale Tastenkürzel unter **Einstellungen → Tastenkürzel** fest. Standardmäßig ist es `Ctrl+Shift+S` unter Windows/Linux und `⌘⇧S` unter macOS. Wähle den aufzunehmenden Bereich; das Bild wird deinen Notizen hinzugefügt. macOS kann um die Berechtigung zur Bildschirmaufnahme bitten.
+- **Globales Zwischenablage-Kürzel:** Damit speicherst du den aktuellen Zwischenablageinhalt, während SFNotes im Hintergrund läuft. Stelle es unter **Einstellungen → Tastenkürzel** ein; Standard ist `Ctrl+Shift+V` oder `⌘⇧V`.
+
+### Gespeicherte Elemente finden und kopieren
+
+- Gib einen Suchbegriff in das Suchfeld ein. Mit `Ctrl+F` oder `⌘F` springst du direkt dorthin.
+- Filtere mit **Alle**, **Text**, **Links**, **Bilder** und **Dateien**. Suche und Filter lassen sich kombinieren.
+- Klicke auf eine Notiz, um ihren Inhalt in die Zwischenablage zu kopieren. Bei einer Dateinotiz kopiert SFNotes den Dateiverweis, bei einem Bild die Bilddaten.
+- Halte beim Klicken `Shift` gedrückt, um das Element zu kopieren und aus der Liste zu entfernen.
+
+### Notizen bearbeiten und verwalten
+
+- Ein Rechtsklick auf eine Notiz oder ein Klick auf **⋮** öffnet **Kopieren**, **Ausschneiden** und **Löschen**. **Ausschneiden** kopiert den Inhalt und entfernt die Notiz aus SFNotes.
+- Wähle **Text bearbeiten**, um Text- oder Linknotizen zu ändern und anschließend zu speichern. Ein Klick mit der mittleren Maustaste öffnet für diese Notizen ebenfalls den Editor.
+- Über **…** oben erreichst du **Datei hinzufügen**, Anheften, **Einstellungen** und **SFNotes schließen**.
+- Notizen sind standardmäßig nummeriert. Du kannst die Nummerierung in den Einstellungen ausschalten.
+
+### Darstellung und Verhalten ändern
+
+Öffne **Einstellungen** unten rechts, um:
+
+- Das helle, dunkle oder lavendelfarbene Design und einen gelben, blauen oder grünen Akzent zu wählen.
+- Textgröße und Abstand zwischen Notizen einzustellen.
+- Englisch, Spanisch, Französisch, Deutsch, Italienisch oder Portugiesisch auszuwählen.
+- SFNotes über anderen Fenstern zu halten und das Anheften beim Start festzulegen.
+- Die Nummerierung ein- oder auszuschalten.
+- Tastenkürzel für Einfügen, Suche, globales Speichern der Zwischenablage, Bildschirmaufnahmen und das Schließen von Bedienfeldern zu ändern. Globale Kürzel funktionieren im Hintergrund; manche Kombinationen können vom Betriebssystem belegt sein.
+- Unter **Einstellungen → Updates** nach Aktualisierungen zu suchen. Installierte Versionen prüfen beim Start; sobald ein Update bereit ist, wähle **Neu starten und installieren**.
+
+SFNotes speichert Notizen und Einstellungen automatisch auf diesem Gerät. Wenn du das Fenster schließt, bleiben deine Notizen erhalten.
 
 ## Funktionen
 

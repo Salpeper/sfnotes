@@ -47,15 +47,45 @@ chmod +x SFNotes-*.AppImage
 
 Se o AppImage indicar que falta o FUSE, instale um pacote compatível com FUSE 2 ou utilize o pacote DEB/RPM da sua distribuição. O comportamento das janelas flutuantes e dos espaços de trabalho depende do ambiente de trabalho e do gestor de janelas.
 
-## Como utilizar o SFNotes
+## Manual de utilização completo
 
-1. **Guarde algo:** copie texto, uma ligação ou uma imagem e prima `Ctrl+V` (Windows/Linux) ou `⌘V` (macOS), ou clique no botão **+**. Use o menu **…** para adicionar ficheiros.
-2. **Encontre-o:** pesquise no campo de pesquisa ou filtre por **Todas**, **Texto**, **Ligações**, **Imagens** ou **Ficheiros**.
-3. **Copie-o:** clique numa nota para a copiar para a área de transferência. Mantenha `Shift` premido enquanto clica para a copiar e remover do SFNotes.
-4. **Faça a gestão das notas:** clique com o botão direito (ou use o menu **⋮**) para copiar, cortar ou eliminar. Também pode editar notas de texto e ligações neste menu.
-5. **Personalize a aplicação:** abra **Definições** no canto inferior direito para alterar o tema, a cor de realce, o tamanho do texto, o espaçamento, o idioma e os atalhos. Também pode manter a janela no topo e ativar a numeração.
+Este manual surge depois das instruções de transferência e instalação para que possa instalar primeiro o SFNotes e consultar depois todas as funcionalidades.
 
-Nas Definições, pode configurar atalhos globais para guardar o conteúdo da área de transferência e capturar o ecrã, mesmo quando o SFNotes está em segundo plano. O macOS poderá pedir autorização para gravar o ecrã na primeira captura.
+### Adicionar textos, ligações, imagens e ficheiros
+
+- **Textos e ligações:** copie texto ou um endereço web de qualquer aplicação e prima `Ctrl+V` no Windows/Linux ou `⌘V` no macOS. O SFNotes reconhece endereços web como ligações. Também pode clicar no botão **+** para guardar o conteúdo atual da área de transferência.
+- **Imagens:** copie uma imagem e cole-a com o mesmo atalho ou com o botão **+**. O SFNotes guarda uma pré-visualização e permite copiá-la novamente mais tarde.
+- **Ficheiros:** abra o menu **…** no canto superior direito e escolha **Adicionar ficheiro**. Pode selecionar um ou vários ficheiros. Colar ficheiros copiados também poderá funcionar, consoante o sistema operativo.
+- **Capturas de ecrã:** configure o atalho global em **Definições → Atalhos de teclado**. Por predefinição, é `Ctrl+Shift+S` no Windows/Linux e `⌘⇧S` no macOS. Selecione a área a capturar e a imagem será adicionada às notas. O macOS poderá pedir autorização para gravar o ecrã.
+- **Atalho global da área de transferência:** guarda o conteúdo copiado mesmo quando o SFNotes está em segundo plano. Configure-o em **Definições → Atalhos de teclado**; por predefinição, é `Ctrl+Shift+V` ou `⌘⇧V`.
+
+### Encontrar e copiar elementos guardados
+
+- Escreva no campo de pesquisa para encontrar conteúdo nas notas. Prima `Ctrl+F` ou `⌘F` para focar o campo.
+- Filtre por **Todas**, **Texto**, **Ligações**, **Imagens** e **Ficheiros**. A pesquisa e os filtros podem ser usados em conjunto.
+- Clique numa nota para copiar o conteúdo para a área de transferência. Numa nota de ficheiro, o SFNotes copia a referência ao ficheiro; numa imagem, copia a imagem.
+- Mantenha `Shift` premido enquanto clica para copiar o elemento e removê-lo da lista.
+
+### Editar e organizar notas
+
+- Clique com o botão direito numa nota ou no botão **⋮** para abrir as ações **Copiar**, **Cortar** ou **Eliminar**. **Cortar** copia o conteúdo e remove a nota do SFNotes.
+- Escolha **Editar texto** para alterar uma nota de texto ou ligação e guarde as alterações. O clique com o botão do meio também abre o editor para estas notas.
+- O menu **…** na barra superior inclui **Adicionar ficheiro**, opções para fixar a janela, **Definições** e **Fechar SFNotes**.
+- As notas são numeradas por predefinição. Pode desativar a numeração nas definições.
+
+### Alterar o aspeto e o comportamento
+
+Abra **Definições** no canto inferior direito para:
+
+- Escolher o tema claro, escuro ou lavanda e uma cor de realce amarela, azul ou verde.
+- Ajustar o tamanho do texto e o espaçamento entre notas.
+- Escolher inglês, espanhol, francês, alemão, italiano ou português.
+- Manter o SFNotes acima das outras janelas e decidir se fica fixo ao iniciar.
+- Ativar ou desativar a numeração.
+- Alterar os atalhos para colar, pesquisar, guardar globalmente a área de transferência, capturar o ecrã e fechar painéis. Os atalhos globais funcionam em segundo plano; o sistema operativo poderá reservar algumas combinações.
+- Procurar atualizações em **Definições → Atualizações**. As versões instaladas verificam atualizações ao iniciar; quando estiver pronta uma atualização, escolha **Reiniciar e instalar**.
+
+O SFNotes guarda automaticamente as notas e preferências neste dispositivo. Fechar a janela não elimina as notas.
 
 ## Funcionalidades
 

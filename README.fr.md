@@ -47,15 +47,45 @@ chmod +x SFNotes-*.AppImage
 
 Si AppImage signale l’absence de FUSE, installez un paquet compatible FUSE 2 ou utilisez le paquet DEB/RPM de votre distribution. Le comportement des fenêtres flottantes et des espaces de travail dépend de l’environnement de bureau et du gestionnaire de fenêtres.
 
-## Utiliser SFNotes
+## Guide complet d’utilisation
 
-1. **Enregistrer un élément :** copiez du texte, un lien ou une image, puis appuyez sur `Ctrl+V` (Windows/Linux) ou `⌘V` (macOS), ou cliquez sur **+**. Le menu **…** permet d’ajouter des fichiers.
-2. **Le retrouver :** recherchez dans le champ prévu à cet effet ou filtrez avec **Toutes**, **Texte**, **Liens**, **Images** ou **Fichiers**.
-3. **Le copier :** cliquez sur une note pour la copier dans le presse-papiers. Maintenez `Shift` en cliquant pour la copier et la supprimer de SFNotes.
-4. **Gérer une note :** faites un clic droit (ou utilisez le menu **⋮**) pour copier, couper ou supprimer. Ce menu permet aussi de modifier les notes textuelles et les liens.
-5. **Personnaliser l’application :** ouvrez **Réglages** en bas à droite pour changer le thème, la couleur de surbrillance, la taille du texte, l’espacement des notes, la langue et les raccourcis. Vous pouvez aussi garder la fenêtre au premier plan et numéroter les notes.
+Ce guide vient après les instructions de téléchargement et d’installation afin que vous puissiez d’abord installer SFNotes, puis découvrir toutes ses fonctions.
 
-Dans les réglages, vous pouvez définir des raccourcis globaux pour enregistrer le presse-papiers et capturer l’écran, même lorsque SFNotes est en arrière-plan. macOS peut demander l’autorisation d’enregistrement de l’écran lors de la première capture.
+### Ajouter du texte, des liens, des images et des fichiers
+
+- **Texte et liens :** copiez du texte ou une adresse Web depuis une application, puis appuyez sur `Ctrl+V` sous Windows/Linux ou `⌘V` sous macOS. SFNotes reconnaît les adresses Web et les classe comme liens. Vous pouvez aussi cliquer sur **+** pour enregistrer le contenu actuel du presse-papiers.
+- **Images :** copiez une image et collez-la avec le même raccourci ou le bouton **+**. SFNotes enregistre un aperçu et permet de la recopier ensuite.
+- **Fichiers :** ouvrez le menu **…** en haut à droite et choisissez **Ajouter un fichier**. Vous pouvez en sélectionner un ou plusieurs. Le collage de fichiers copiés peut aussi fonctionner selon le système.
+- **Captures d’écran :** configurez le raccourci global dans **Réglages → Raccourcis clavier**. Par défaut, il s’agit de `Ctrl+Shift+S` sous Windows/Linux et `⌘⇧S` sous macOS. Sélectionnez la zone à capturer ; l’image est ajoutée aux notes. macOS peut demander l’autorisation d’enregistrement de l’écran.
+- **Raccourci global du presse-papiers :** il enregistre le contenu copié même lorsque SFNotes est en arrière-plan. Configurez-le dans **Réglages → Raccourcis clavier** ; par défaut, c’est `Ctrl+Shift+V` ou `⌘⇧V`.
+
+### Rechercher et copier des éléments
+
+- Saisissez du texte dans le champ de recherche. Appuyez sur `Ctrl+F` ou `⌘F` pour y placer le curseur.
+- Filtrez avec **Toutes**, **Texte**, **Liens**, **Images** et **Fichiers**. La recherche et les filtres se combinent.
+- Cliquez sur une note pour copier son contenu dans le presse-papiers. Pour une note de fichier, SFNotes copie la référence du fichier ; pour une image, il copie l’image.
+- Maintenez `Shift` en cliquant pour copier l’élément et le retirer de la liste.
+
+### Modifier et organiser les notes
+
+- Faites un clic droit sur une note ou cliquez sur son bouton **⋮** pour ouvrir les actions : **Copier**, **Couper** ou **Supprimer**. **Couper** copie le contenu puis retire la note de SFNotes.
+- Choisissez **Modifier le texte** dans le menu pour modifier une note textuelle ou un lien, puis enregistrez. Un clic avec le bouton central ouvre aussi l’éditeur pour ces notes.
+- Le bouton **…** de la barre supérieure donne accès aux actions de l’application : **Ajouter un fichier**, les options d’épinglage, **Réglages** et **Fermer SFNotes**.
+- Les notes sont numérotées par défaut. Vous pouvez désactiver cette option dans les réglages.
+
+### Modifier l’apparence et le comportement
+
+Ouvrez **Réglages** en bas à droite pour :
+
+- Choisir le thème clair, sombre ou lavande et une couleur d’accent jaune, bleue ou verte.
+- Régler la taille du texte et l’espacement des notes.
+- Choisir l’anglais, l’espagnol, le français, l’allemand, l’italien ou le portugais.
+- Garder SFNotes au-dessus des autres fenêtres et choisir de l’épingler au démarrage.
+- Activer ou désactiver la numérotation.
+- Modifier les raccourcis de collage, de recherche, d’enregistrement global du presse-papiers, de capture d’écran et de fermeture des panneaux. Les raccourcis globaux fonctionnent lorsque SFNotes est en arrière-plan ; le système peut réserver certaines combinaisons.
+- Rechercher des mises à jour dans **Réglages → Mises à jour**. Les versions installées vérifient les mises à jour au démarrage ; lorsqu’une mise à jour est prête, choisissez **Redémarrer et installer**.
+
+SFNotes enregistre automatiquement vos notes et préférences sur cet appareil. Fermer la fenêtre ne supprime pas vos notes.
 
 ## Fonctionnalités
 

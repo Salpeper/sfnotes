@@ -47,15 +47,45 @@ chmod +x SFNotes-*.AppImage
 
 Se AppImage segnala che manca FUSE, installa un pacchetto compatibile con FUSE 2 oppure usa il pacchetto DEB/RPM della tua distribuzione. Il comportamento delle finestre flottanti e degli spazi di lavoro dipende dall’ambiente desktop e dal gestore di finestre.
 
-## Come usare SFNotes
+## Guida completa all’uso
 
-1. **Salva qualcosa:** copia testo, un link o un’immagine e premi `Ctrl+V` (Windows/Linux) o `⌘V` (macOS), oppure fai clic su **+**. Usa il menu **…** per aggiungere file.
-2. **Ritrovalo:** cerca nel campo di ricerca oppure filtra con **Tutte**, **Testo**, **Link**, **Immagini** o **File**.
-3. **Copialo:** fai clic su una nota per copiarla negli appunti. Tieni premuto `Shift` mentre fai clic per copiarla e rimuoverla da SFNotes.
-4. **Gestisci una nota:** fai clic con il tasto destro (o usa il menu **⋮**) per copiare, tagliare o eliminare. Da qui puoi anche modificare le note di testo e i link.
-5. **Personalizza l’app:** apri **Impostazioni** in basso a destra per cambiare tema, colore di evidenziazione, dimensione del testo, spaziatura, lingua e scorciatoie. Puoi anche mantenere la finestra in primo piano e attivare la numerazione.
+Questa guida segue le istruzioni per il download e l’installazione, così puoi prima installare SFNotes e poi consultare tutte le sue funzioni.
 
-In Impostazioni puoi configurare scorciatoie globali per salvare gli appunti e acquisire lo schermo, anche quando SFNotes è in secondo piano. macOS potrebbe chiedere il permesso di registrazione dello schermo al primo utilizzo.
+### Aggiungere testi, link, immagini e file
+
+- **Testi e link:** copia un testo o un indirizzo web da qualsiasi app e premi `Ctrl+V` su Windows/Linux oppure `⌘V` su macOS. SFNotes riconosce gli indirizzi web e li classifica come link. Puoi anche fare clic su **+** per salvare il contenuto corrente degli appunti.
+- **Immagini:** copia un’immagine e incollala con la stessa scorciatoia o con il pulsante **+**. SFNotes ne salva un’anteprima e consente di ricopiarla in seguito.
+- **File:** apri il menu **…** in alto a destra e scegli **Aggiungi file**. Puoi selezionare uno o più file. Anche incollare file copiati può funzionare, a seconda del sistema operativo.
+- **Catture dello schermo:** configura la scorciatoia globale in **Impostazioni → Scorciatoie da tastiera**. Quella predefinita è `Ctrl+Shift+S` su Windows/Linux e `⌘⇧S` su macOS. Seleziona l’area da catturare e l’immagine verrà aggiunta alle note. macOS potrebbe chiedere il permesso di registrare lo schermo.
+- **Scorciatoia globale degli appunti:** salva il contenuto copiato anche quando SFNotes è in secondo piano. Configurala in **Impostazioni → Scorciatoie da tastiera**; la combinazione predefinita è `Ctrl+Shift+V` o `⌘⇧V`.
+
+### Trovare e copiare gli elementi salvati
+
+- Digita nel campo di ricerca per trovare il contenuto delle note. Premi `Ctrl+F` o `⌘F` per portare lì il cursore.
+- Filtra con **Tutte**, **Testo**, **Link**, **Immagini** e **File**. Ricerca e filtri si combinano.
+- Fai clic su una nota per copiarne il contenuto negli appunti. Per una nota di file, SFNotes copia il riferimento al file; per un’immagine, copia l’immagine.
+- Tieni premuto `Shift` mentre fai clic per copiare l’elemento e rimuoverlo dall’elenco.
+
+### Modificare e organizzare le note
+
+- Fai clic con il tasto destro su una nota o sul pulsante **⋮** per aprire le azioni **Copia**, **Taglia** o **Elimina**. **Taglia** copia il contenuto e rimuove la nota da SFNotes.
+- Scegli **Modifica testo** per modificare una nota di testo o un link e salva le modifiche. Anche il clic con il pulsante centrale apre l’editor per queste note.
+- Il menu **…** nella barra superiore contiene **Aggiungi file**, le opzioni per fissare la finestra, **Impostazioni** e **Chiudi SFNotes**.
+- Le note sono numerate per impostazione predefinita. Puoi disattivare la numerazione nelle impostazioni.
+
+### Cambiare aspetto e comportamento
+
+Apri **Impostazioni** in basso a destra per:
+
+- Scegliere il tema chiaro, scuro o lavanda e un colore di evidenziazione giallo, blu o verde.
+- Regolare la dimensione del testo e la spaziatura tra le note.
+- Scegliere inglese, spagnolo, francese, tedesco, italiano o portoghese.
+- Mantenere SFNotes sopra le altre finestre e decidere se fissarla all’avvio.
+- Attivare o disattivare la numerazione.
+- Modificare le scorciatoie per incollare, cercare, salvare globalmente gli appunti, catturare lo schermo e chiudere i pannelli. Le scorciatoie globali funzionano in background; il sistema operativo potrebbe riservare alcune combinazioni.
+- Cercare aggiornamenti in **Impostazioni → Aggiornamenti**. Le versioni installate li verificano all’avvio; quando un aggiornamento è pronto, scegli **Riavvia e installa**.
+
+SFNotes salva automaticamente note e preferenze su questo dispositivo. Chiudere la finestra non elimina le note.
 
 ## Funzionalità
 
