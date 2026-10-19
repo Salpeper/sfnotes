@@ -50,6 +50,64 @@ const translations = {
   }
 };
 
+const showcaseTranslations = {
+  es: {
+    navScreenshots: 'Capturas', showcaseEyebrow: 'MIRA CÓMO FUNCIONA', showcaseTitle: 'Todo lo que necesitas,<br />a simple vista.', showcaseDescription: 'Explora algunas pantallas de SFNotes y descubre cómo se adapta a tu forma de guardar y encontrar cosas.',
+    galleryFilterTitle: 'Encuentra cada cosa', galleryFilterDescription: 'Filtra tus notas por texto, enlaces, imágenes o archivos para llegar rápido a lo que buscas.', galleryFilterAlt: 'Notas filtradas para mostrar solo enlaces',
+    galleryActionsTitle: 'Acciones al momento', galleryActionsDescription: 'Copia, edita, corta o elimina una nota desde su menú.', galleryActionsAlt: 'Menú de acciones de una nota',
+    galleryThemesTitle: 'Elige tu aspecto', galleryThemesDescription: 'Prueba ocho temas y cambia el color de resaltado para darle tu estilo.', galleryThemesAlt: 'Ajustes con temas y colores de resaltado',
+    galleryControlsTitle: 'Personaliza los controles', galleryControlsDescription: 'Muestra u oculta búsqueda, filtros, contador y botones. Decide dónde colocar los controles.', galleryControlsAlt: 'Ajustes para mostrar u ocultar funciones y cambiar su posición',
+    galleryDarkTitle: 'También en oscuro', galleryDarkDescription: 'El tema Medianoche ofrece una apariencia oscura para trabajar con poca luz.', galleryDarkAlt: 'SFNotes con el tema oscuro Medianoche',
+    galleryEditTitle: 'Edita tus notas', galleryEditDescription: 'Abre una nota para cambiar su contenido y guarda los cambios en este dispositivo.', galleryEditAlt: 'Editor para modificar el contenido de una nota'
+  },
+  en: {
+    navScreenshots: 'Screenshots', showcaseEyebrow: 'SEE HOW IT WORKS', showcaseTitle: 'Everything you need,<br />at a glance.', showcaseDescription: 'Take a look inside SFNotes and see how it fits the way you save and find things.',
+    galleryFilterTitle: 'Find things quickly', galleryFilterDescription: 'Filter notes by text, links, images or files to get to what you need.', galleryFilterAlt: 'Notes filtered to show links only',
+    galleryActionsTitle: 'Quick note actions', galleryActionsDescription: 'Copy, edit, cut or delete a note from its menu.', galleryActionsAlt: 'A note action menu',
+    galleryThemesTitle: 'Choose your look', galleryThemesDescription: 'Try eight themes and change the highlight color to make it yours.', galleryThemesAlt: 'Settings with themes and highlight colors',
+    galleryControlsTitle: 'Customize the controls', galleryControlsDescription: 'Show or hide search, filters, the counter and buttons. Choose where controls appear.', galleryControlsAlt: 'Settings to show or hide features and change their positions',
+    galleryDarkTitle: 'A dark option too', galleryDarkDescription: 'The Midnight theme offers a darker look for working in low light.', galleryDarkAlt: 'SFNotes using the Midnight dark theme',
+    galleryEditTitle: 'Edit your notes', galleryEditDescription: 'Open a note to change its content and save your changes on this device.', galleryEditAlt: 'Editor for changing a note’s content'
+  },
+  fr: {
+    navScreenshots: 'Captures', showcaseEyebrow: 'DÉCOUVREZ SON FONCTIONNEMENT', showcaseTitle: 'Tout ce qu’il vous faut,<br />en un coup d’œil.', showcaseDescription: 'Découvrez quelques écrans de SFNotes et voyez comment l’application s’adapte à votre façon de conserver et retrouver vos éléments.',
+    galleryFilterTitle: 'Retrouvez vos éléments', galleryFilterDescription: 'Filtrez les notes par texte, liens, images ou fichiers pour trouver rapidement ce que vous cherchez.', galleryFilterAlt: 'Notes filtrées pour afficher uniquement les liens',
+    galleryActionsTitle: 'Des actions rapides', galleryActionsDescription: 'Copiez, modifiez, coupez ou supprimez une note depuis son menu.', galleryActionsAlt: 'Menu des actions d’une note',
+    galleryThemesTitle: 'Choisissez votre apparence', galleryThemesDescription: 'Essayez huit thèmes et changez la couleur de surbrillance selon vos envies.', galleryThemesAlt: 'Réglages des thèmes et des couleurs de surbrillance',
+    galleryControlsTitle: 'Personnalisez les commandes', galleryControlsDescription: 'Affichez ou masquez la recherche, les filtres, le compteur et les boutons. Choisissez leur emplacement.', galleryControlsAlt: 'Réglages pour afficher, masquer ou déplacer des fonctions',
+    galleryDarkTitle: 'Un thème sombre aussi', galleryDarkDescription: 'Le thème Minuit propose une apparence sombre pour travailler avec peu de lumière.', galleryDarkAlt: 'SFNotes avec le thème sombre Minuit',
+    galleryEditTitle: 'Modifiez vos notes', galleryEditDescription: 'Ouvrez une note pour modifier son contenu et enregistrer les changements sur cet appareil.', galleryEditAlt: 'Éditeur du contenu d’une note'
+  },
+  de: {
+    navScreenshots: 'Einblicke', showcaseEyebrow: 'SO FUNKTIONIERT ES', showcaseTitle: 'Alles Wichtige<br />auf einen Blick.', showcaseDescription: 'Sieh dir SFNotes an und entdecke, wie die App dich beim Speichern und Wiederfinden unterstützt.',
+    galleryFilterTitle: 'Alles schnell finden', galleryFilterDescription: 'Filtere Notizen nach Text, Links, Bildern oder Dateien und finde schneller, wonach du suchst.', galleryFilterAlt: 'Notizen, gefiltert auf Links',
+    galleryActionsTitle: 'Schnelle Aktionen', galleryActionsDescription: 'Kopiere, bearbeite, schneide aus oder lösche eine Notiz über ihr Menü.', galleryActionsAlt: 'Menü mit Notizaktionen',
+    galleryThemesTitle: 'Wähle dein Design', galleryThemesDescription: 'Probiere acht Designs aus und passe die Hervorhebungsfarbe an.', galleryThemesAlt: 'Einstellungen für Designs und Hervorhebungsfarben',
+    galleryControlsTitle: 'Steuerelemente anpassen', galleryControlsDescription: 'Blende Suche, Filter, Zähler und Schaltflächen ein oder aus. Lege ihre Position fest.', galleryControlsAlt: 'Einstellungen zum Ein- und Ausblenden und Verschieben von Funktionen',
+    galleryDarkTitle: 'Auch dunkel verfügbar', galleryDarkDescription: 'Das Mitternacht-Design bietet eine dunkle Ansicht für wenig Licht.', galleryDarkAlt: 'SFNotes im dunklen Mitternacht-Design',
+    galleryEditTitle: 'Notizen bearbeiten', galleryEditDescription: 'Öffne eine Notiz, ändere ihren Inhalt und speichere die Änderungen auf diesem Gerät.', galleryEditAlt: 'Editor zum Ändern des Inhalts einer Notiz'
+  },
+  it: {
+    navScreenshots: 'Immagini', showcaseEyebrow: 'SCOPRI COME FUNZIONA', showcaseTitle: 'Tutto quello che serve,<br />a colpo d’occhio.', showcaseDescription: 'Dai un’occhiata a SFNotes e scopri come si adatta al tuo modo di salvare e ritrovare le cose.',
+    galleryFilterTitle: 'Trova tutto rapidamente', galleryFilterDescription: 'Filtra le note per testo, link, immagini o file e raggiungi subito ciò che cerchi.', galleryFilterAlt: 'Note filtrate per mostrare solo i link',
+    galleryActionsTitle: 'Azioni rapide', galleryActionsDescription: 'Copia, modifica, taglia o elimina una nota dal suo menu.', galleryActionsAlt: 'Menu delle azioni di una nota',
+    galleryThemesTitle: 'Scegli il tuo stile', galleryThemesDescription: 'Prova otto temi e cambia il colore di evidenziazione come preferisci.', galleryThemesAlt: 'Impostazioni dei temi e dei colori di evidenziazione',
+    galleryControlsTitle: 'Personalizza i controlli', galleryControlsDescription: 'Mostra o nascondi ricerca, filtri, conteggio e pulsanti. Scegli dove posizionare i controlli.', galleryControlsAlt: 'Impostazioni per mostrare, nascondere o spostare le funzioni',
+    galleryDarkTitle: 'Disponibile anche scuro', galleryDarkDescription: 'Il tema Mezzanotte offre un aspetto scuro per lavorare con poca luce.', galleryDarkAlt: 'SFNotes con il tema scuro Mezzanotte',
+    galleryEditTitle: 'Modifica le note', galleryEditDescription: 'Apri una nota per modificarne il contenuto e salvare i cambiamenti su questo dispositivo.', galleryEditAlt: 'Editor per modificare il contenuto di una nota'
+  },
+  pt: {
+    navScreenshots: 'Imagens', showcaseEyebrow: 'VEJA COMO FUNCIONA', showcaseTitle: 'Tudo o que precisa,<br />num relance.', showcaseDescription: 'Explore alguns ecrãs do SFNotes e veja como se adapta à sua forma de guardar e encontrar coisas.',
+    galleryFilterTitle: 'Encontre tudo rapidamente', galleryFilterDescription: 'Filtre notas por texto, links, imagens ou ficheiros para encontrar rapidamente o que procura.', galleryFilterAlt: 'Notas filtradas para mostrar apenas links',
+    galleryActionsTitle: 'Ações rápidas', galleryActionsDescription: 'Copie, edite, corte ou elimine uma nota através do menu.', galleryActionsAlt: 'Menu de ações de uma nota',
+    galleryThemesTitle: 'Escolha o seu visual', galleryThemesDescription: 'Experimente oito temas e altere a cor de destaque ao seu gosto.', galleryThemesAlt: 'Definições de temas e cores de destaque',
+    galleryControlsTitle: 'Personalize os controlos', galleryControlsDescription: 'Mostre ou oculte a pesquisa, os filtros, o contador e os botões. Escolha onde ficam os controlos.', galleryControlsAlt: 'Definições para mostrar, ocultar ou mover funcionalidades',
+    galleryDarkTitle: 'Também em modo escuro', galleryDarkDescription: 'O tema Meia-noite oferece um visual escuro para trabalhar com pouca luz.', galleryDarkAlt: 'SFNotes com o tema escuro Meia-noite',
+    galleryEditTitle: 'Edite as suas notas', galleryEditDescription: 'Abra uma nota, altere o seu conteúdo e guarde as mudanças neste dispositivo.', galleryEditAlt: 'Editor para alterar o conteúdo de uma nota'
+  }
+};
+for (const language of Object.keys(showcaseTranslations)) Object.assign(translations[language], showcaseTranslations[language]);
+
 const supportedLanguages = Object.keys(translations);
 const languageSelect = document.querySelector('#language-select');
 let activeLanguage = 'es';
