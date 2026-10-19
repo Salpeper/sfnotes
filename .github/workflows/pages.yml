@@ -6,6 +6,8 @@ on:
       - main
     paths:
       - 'docs/**'
+      - 'website/**'
+      - 'scripts/generate-site-locales.mjs'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
 
@@ -30,6 +32,8 @@ jobs:
         uses: actions/checkout@v4
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
+      - name: Generate localized search pages and sitemap
+        run: node scripts/generate-site-locales.mjs
       - name: Upload website files
         uses: actions/upload-pages-artifact@v4
         with:

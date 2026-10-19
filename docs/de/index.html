@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f5ef" />
+    <meta name="description" content="Kostenlose Desktop-Notiz-App für Texte, Links, Bilder und Dateien. Lade SFNotes für Windows, macOS und Linux herunter und passe Designs und Bedienelemente an." />
+    <meta property="og:title" content="SFNotes: kostenlose Notiz-App für den Desktop" />
+    <meta property="og:description" content="Ein schwebender Ort, um Wichtiges zu speichern und wiederzufinden. Kostenlos für Windows, macOS und Linux." />
+    <meta property="og:image" content="https://salpeper.github.io/sfnotes/images/notes-main.png" />
+    <link rel="canonical" href="https://salpeper.github.io/sfnotes/de/" />
+    <link rel="alternate" hreflang="es" href="https://salpeper.github.io/sfnotes/" />
+    <link rel="alternate" hreflang="en" href="https://salpeper.github.io/sfnotes/en/" />
+    <link rel="alternate" hreflang="fr" href="https://salpeper.github.io/sfnotes/fr/" />
+    <link rel="alternate" hreflang="de" href="https://salpeper.github.io/sfnotes/de/" />
+    <link rel="alternate" hreflang="it" href="https://salpeper.github.io/sfnotes/it/" />
+    <link rel="alternate" hreflang="pt" href="https://salpeper.github.io/sfnotes/pt/" />
+    <link rel="alternate" hreflang="x-default" href="https://salpeper.github.io/sfnotes/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://salpeper.github.io/sfnotes/de/" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"SFNotes","description":"Kostenlose Desktop-Notiz-App für Texte, Links, Bilder und Dateien. Lade SFNotes für Windows, macOS und Linux herunter und passe Designs und Bedienelemente an.","applicationCategory":"UtilitiesApplication","operatingSystem":"Windows 10 or later, macOS, Linux","url":"https://salpeper.github.io/sfnotes/de/","downloadUrl":"https://github.com/Salpeper/sfnotes/releases/latest","image":"https://salpeper.github.io/sfnotes/images/notes-main.png","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Person","name":"Salpeper"}}</script>
+    <title>SFNotes: kostenlose Notiz-App für den Desktop</title>
+    <link rel="icon" type="image/png" href="../images/sfnotes-icon.png" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../site.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#inicio" aria-label="SFNotes, Startseite" data-i18n-aria="brandHome">
+        <img src="../images/sfnotes-icon.png" alt="" />
+        <span>SFNotes</span>
+      </a>
+      <nav aria-label="Hauptnavigation" data-i18n-aria="mainNavigation">
+        <a href="#funciones" data-i18n="navFeatures">Funktionen</a>
+        <a href="#como-funciona" data-i18n="navHow">So funktioniert’s</a>
+        <a href="#capturas" data-i18n="navScreenshots">Einblicke</a>
+        <a class="nav-download" href="#descarga"><span data-i18n="navDownload">Herunterladen</span> <span aria-hidden="true">↓</span></a>
+      </nav>
+      <select id="language-select" class="language-select" aria-label="Sprache" data-i18n-aria="languageLabel">
+        <option value="es">Español</option><option value="en">English</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="it">Italiano</option><option value="pt">Português</option>
+      </select>
+    </header>
+
+    <main id="inicio">
+      <section class="hero section-wrap">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot"></span> <span data-i18n="heroEyebrow">EIN KLEINER ORT FÜR DEINE GROSSEN IDEEN</span></p>
+          <h1 data-i18n="heroTitle">Was du brauchst.<br /><span>Immer griffbereit.</span></h1>
+          <p class="hero-description" data-i18n="heroDescription">Speichere Texte, Links, Bilder und Dateien in einer schwebenden Notiz auf deinem Desktop. Finde und kopiere sie, wenn du sie brauchst.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" id="hero-download" href="https://github.com/Salpeper/sfnotes/releases/latest">
+              <span class="download-icon" aria-hidden="true">↓</span>
+              <span><b id="hero-download-label" data-i18n="heroDownload">SFNotes herunterladen</b><small id="hero-download-detail" data-i18n="heroDownloadDetail">Kostenlos für Windows, macOS und Linux</small></span>
+            </a>
+            <a class="button button-secondary" href="https://github.com/Salpeper/sfnotes" target="_blank" rel="noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .9a11.1 11.1 0 0 0-3.5 21.6c.55.1.76-.24.76-.53v-2.08c-3.1.68-3.76-1.32-3.76-1.32-.5-1.3-1.23-1.65-1.23-1.65-1.01-.69.08-.68.08-.68 1.12.08 1.7 1.15 1.7 1.15 1 1.7 2.62 1.2 3.26.92.1-.72.39-1.2.7-1.47-2.48-.28-5.09-1.24-5.09-5.52 0-1.22.44-2.22 1.15-3-.12-.28-.5-1.42.11-2.95 0 0 .94-.3 3.06 1.14a10.63 10.63 0 0 1 5.57 0c2.13-1.44 3.06-1.14 3.06-1.14.61 1.53.23 2.67.12 2.95.71.78 1.14 1.78 1.14 3 0 4.29-2.62 5.23-5.11 5.51.4.35.75 1.03.75 2.08v3.07c0 .29.2.64.77.53A11.1 11.1 0 0 0 12 .9Z" /></svg>
+              <span data-i18n="viewGithub">Auf GitHub ansehen</span>
+            </a>
+          </div>
+          <div class="hero-note"><span aria-hidden="true">✓</span> <span data-i18n="privacy">Deine Notizen bleiben auf deinem Gerät. Kein Konto und keine Cloud-Synchronisierung.</span></div>
+        </div>
+
+        <div class="hero-visual" aria-label="SFNotes-Vorschau" data-i18n-aria="previewLabel">
+          <div class="visual-glow"></div>
+          <div class="floating-tag tag-top"><span>↗</span> <span data-i18n="savedLinks">Gespeicherte Links</span></div>
+          <div class="app-window">
+            <img src="../images/notes-main.png" alt="SFNotes-Bildschirmfoto mit Textnotizen und Links" data-i18n-alt="screenshotAlt" />
+          </div>
+          <div class="floating-tag tag-bottom"><span class="tag-dot"></span> <span data-i18n="alwaysAtHand">Immer griffbereit</span></div>
+        </div>
+      </section>
+
+      <section class="trust-strip" aria-label="Kompatibilität und Datenschutz" data-i18n-aria="trustLabel">
+        <div><span class="strip-icon">⌘</span><span data-i18n="platforms">Windows, macOS und Linux</span></div>
+        <i></i>
+        <div><span class="strip-icon">◉</span><span data-i18n="localSave">Automatische lokale Speicherung</span></div>
+        <i></i>
+        <div><span class="strip-icon">↗</span><span data-i18n="freeOpenSource">Kostenlos und Open Source</span></div>
+      </section>
+
+      <section class="features section-wrap" id="funciones">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="featuresEyebrow">WENIGER SUCHEN, BESSER IM FLUSS</p>
+          <h2 data-i18n="featuresTitle">Alles Wichtige<br />an einem Ort.</h2>
+          <p data-i18n="featuresDescription">Ein unauffälliger Platz auf deinem Desktop für Dinge, nach denen du oft suchst.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card feature-wide">
+            <div class="feature-icon icon-yellow">↗</div>
+            <h3 data-i18n="saveTitle">Alles speichern</h3>
+            <p data-i18n="saveDescription">Texte, Links, Bilder und Dateien in einer praktischen Liste. Füge Inhalte aus der Zwischenablage oder Dateien über das Menü hinzu.</p>
+            <div class="type-chips"><span data-i18n="text">Text</span><span data-i18n="links">Links</span><span data-i18n="images">Bilder</span><span data-i18n="files">Dateien</span></div>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon icon-blue">⌕</div>
+            <h3 data-i18n="findTitle">Sofort wiederfinden</h3>
+            <p data-i18n="findDescription">Suche nach Inhalten und filtere nach Notiztyp, um schnell zu finden, was du brauchst.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon icon-green">⌘</div>
+            <h3 data-i18n="customizeTitle">Ganz nach deinem Geschmack</h3>
+            <p data-i18n="customizeDescription">Wähle aus acht Designs, passe Farben an und blende Steuerelemente aus oder verschiebe sie.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="how-section" id="como-funciona">
+        <div class="section-wrap how-layout">
+          <div class="section-heading">
+            <p class="eyebrow" data-i18n="howEyebrow">GANZ EINFACH</p>
+            <h2 data-i18n="howTitle">Aus der Zwischenablage<br />in deine Notizen.</h2>
+            <p data-i18n="howDescription">Mit SFNotes speicherst du Inhalte in Sekunden und findest sie wieder, ohne deine Arbeit zu unterbrechen.</p>
+          </div>
+          <ol class="steps">
+            <li><span>01</span><div><h3 data-i18n="stepOneTitle">Kopieren oder einfügen</h3><p data-i18n="stepOneDescription">Speichere den Inhalt der Zwischenablage mit der „+“-Schaltfläche oder einer Tastenkombination.</p></div></li>
+            <li><span>02</span><div><h3 data-i18n="stepTwoTitle">Wiederfinden</h3><p data-i18n="stepTwoDescription">Suche, filtere und organisiere deine Notizen. Passe SFNotes in den Einstellungen an.</p></div></li>
+            <li><span>03</span><div><h3 data-i18n="stepThreeTitle">Weiterverwenden</h3><p data-i18n="stepThreeDescription">Klicke auf eine Notiz, um sie erneut zu kopieren. Deine Daten bleiben auf deinem Gerät.</p></div></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="showcase-section section-wrap" id="capturas">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="showcaseEyebrow">SO FUNKTIONIERT ES</p>
+          <h2 data-i18n="showcaseTitle">Alles Wichtige<br />auf einen Blick.</h2>
+          <p data-i18n="showcaseDescription">Sieh dir SFNotes an und entdecke, wie die App dich beim Speichern und Wiederfinden unterstützt.</p>
+        </div>
+        <div class="showcase-grid">
+          <article class="showcase-card">
+            <figure><img src="../images/app-links.png" width="664" height="718" loading="lazy" decoding="async" alt="Notizen, gefiltert auf Links" data-i18n-alt="galleryFilterAlt" /></figure>
+            <div class="showcase-caption"><h3 data-i18n="galleryFilterTitle">Alles schnell finden</h3><p data-i18n="galleryFilterDescription">Filtere Notizen nach Text, Links, Bildern oder Dateien und finde schneller, wonach du suchst.</p></div>
+          </article>
+          <article class="showcase-card">
+            <figure><img src="../images/app-note-actions.png" width="664" height="718" loading="lazy" decoding="async" alt="Menü mit Notizaktionen" data-i18n-alt="galleryActionsAlt" /></figure>
+            <div class="showcase-caption"><h3 data-i18n="galleryActionsTitle">Schnelle Aktionen</h3><p data-i18n="galleryActionsDescription">Kopiere, bearbeite, schneide aus oder lösche eine Notiz über ihr Menü.</p></div>
+          </article>
+          <article class="showcase-card">
+            <figure><img src="../images/app-settings-themes.png" width="664" height="718" loading="lazy" decoding="async" alt="Einstellungen für Designs und Hervorhebungsfarben" data-i18n-alt="galleryThemesAlt" /></figure>
+            <div class="showcase-caption"><h3 data-i18n="galleryThemesTitle">Wähle dein Design</h3><p data-i18n="galleryThemesDescription">Probiere acht Designs aus und passe die Hervorhebungsfarbe an.</p></div>
+          </article>
+          <article class="showcase-card">
+            <figure><img src="../images/app-settings-controls.png" width="664" height="718" loading="lazy" decoding="async" alt="Einstellungen zum Ein- und Ausblenden und Verschieben von Funktionen" data-i18n-alt="galleryControlsAlt" /></figure>
+            <div class="showcase-caption"><h3 data-i18n="galleryControlsTitle">Steuerelemente anpassen</h3><p data-i18n="galleryControlsDescription">Blende Suche, Filter, Zähler und Schaltflächen ein oder aus. Lege ihre Position fest.</p></div>
+          </article>
+          <article class="showcase-card">
+            <figure><img src="../images/app-midnight.png" width="664" height="718" loading="lazy" decoding="async" alt="SFNotes im dunklen Mitternacht-Design" data-i18n-alt="galleryDarkAlt" /></figure>
+            <div class="showcase-caption"><h3 data-i18n="galleryDarkTitle">Auch dunkel verfügbar</h3><p data-i18n="galleryDarkDescription">Das Mitternacht-Design bietet eine dunkle Ansicht für wenig Licht.</p></div>
+          </article>
+          <article class="showcase-card">
+            <figure><img src="../images/app-edit-note.png" width="664" height="718" loading="lazy" decoding="async" alt="Editor zum Ändern des Inhalts einer Notiz" data-i18n-alt="galleryEditAlt" /></figure>
+            <div class="showcase-caption"><h3 data-i18n="galleryEditTitle">Notizen bearbeiten</h3><p data-i18n="galleryEditDescription">Öffne eine Notiz, ändere ihren Inhalt und speichere die Änderungen auf diesem Gerät.</p></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="download-section section-wrap" id="descarga">
+        <div class="download-heading">
+          <p class="eyebrow" data-i18n="downloadEyebrow">BEREIT, WENN DU ES BIST</p>
+          <h2 data-i18n="downloadTitle">Schaffe Platz dafür<br />auf deinem Desktop.</h2>
+          <p data-i18n="downloadDescription">Lade SFNotes kostenlos herunter. Wähle dein System und speichere, was wichtig ist.</p>
+        </div>
+        <div class="download-grid">
+          <article class="download-card" data-platform="windows">
+            <div class="platform-icon windows-icon">⊞</div><h3>Windows</h3><p data-i18n="windowsDescription">Windows 10 und 11 · x64</p>
+            <a class="platform-download" href="https://github.com/Salpeper/sfnotes/releases/latest" data-asset="windows"><span data-i18n="downloadExe">.exe herunterladen</span> <span>↓</span></a>
+          </article>
+          <article class="download-card" data-platform="macos">
+            <div class="platform-icon apple-icon">●</div><h3>macOS</h3><p data-i18n="macDescription">Intel und Apple Silicon</p>
+            <a class="platform-download" href="https://github.com/Salpeper/sfnotes/releases/latest" data-asset="macos"><span data-i18n="downloadDmg">.dmg herunterladen</span> <span>↓</span></a>
+          </article>
+          <article class="download-card" data-platform="linux">
+            <div class="platform-icon linux-icon">◉</div><h3>Linux</h3><p data-i18n="linuxDescription">AppImage, DEB und RPM · x64</p>
+            <a class="platform-download" href="https://github.com/Salpeper/sfnotes/releases/latest" data-asset="linux"><span data-i18n="downloadAppImage">AppImage herunterladen</span> <span>↓</span></a>
+          </article>
+        </div>
+        <p class="other-downloads"><span data-i18n="otherFormat">Du suchst ein anderes Format?</span> <a href="https://github.com/Salpeper/sfnotes/releases/latest" id="all-downloads"><span data-i18n="allDownloads">Alle Downloads auf GitHub ansehen</span> <span>↗</span></a></p>
+        <p class="release-note" id="release-note"><span data-i18n="latestVersion">Neueste Version</span> · <span>1.0.0</span></p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="#inicio"><img src="../images/sfnotes-icon.png" alt="" /><span>SFNotes</span></a>
+      <p data-i18n="footerTagline">Eine kleine Notiz, damit Wichtiges in deiner Nähe bleibt.</p>
+      <div><a href="https://github.com/Salpeper/sfnotes" target="_blank" rel="noreferrer" data-i18n="sourceCode">Quellcode</a><a href="https://github.com/Salpeper/sfnotes/releases/latest" data-i18n="downloads">Downloads</a><span>© <span id="year">2026</span> SFNotes</span></div>
+    </footer>
+  </body>
+</html>
