@@ -70,14 +70,14 @@ Diese Anleitung steht nach dem Download- und Installationsabschnitt, damit du SF
 
 - Ein Rechtsklick auf eine Notiz oder ein Klick auf **⋮** öffnet **Kopieren**, **Ausschneiden** und **Löschen**. **Ausschneiden** kopiert den Inhalt und entfernt die Notiz aus SFNotes.
 - Wähle **Text bearbeiten**, um Text- oder Linknotizen zu ändern und anschließend zu speichern. Ein Klick mit der mittleren Maustaste öffnet für diese Notizen ebenfalls den Editor.
-- Über **…** oben erreichst du **Datei hinzufügen**, Anheften, **Einstellungen** und **SFNotes schließen**.
+- **…** oben öffnet Datei- und Anheftaktionen. Die Ein/Aus-Schaltfläche daneben schließt SFNotes; in den Einstellungen schließt die Ein/Aus-Schaltfläche die App und das **X** die Einstellungen.
 - Notizen sind standardmäßig nummeriert. Du kannst die Nummerierung in den Einstellungen ausschalten.
 
 ### Darstellung und Verhalten ändern
 
 Öffne **Einstellungen** unten rechts, um:
 
-- Das helle, dunkle oder lavendelfarbene Design und einen gelben, blauen oder grünen Akzent zu wählen.
+- Aus acht Designs und acht Akzentfarben zu wählen, Bedienelemente auszublenden und die Hinzufügen- und Anheften-Schaltflächen zwischen den Leisten zu verschieben.
 - Textgröße und Abstand zwischen Notizen einzustellen.
 - Englisch, Spanisch, Französisch, Deutsch, Italienisch oder Portugiesisch auszuwählen.
 - SFNotes über anderen Fenstern zu halten und das Anheften beim Start festzulegen.
@@ -91,7 +91,8 @@ SFNotes speichert Notizen und Einstellungen automatisch auf diesem Gerät. Wenn 
 
 - Vorschau für Texte, Links, Bilder und Dateien; Nummerierung optional.
 - Suche und Filter nach Notiztyp.
-- Helle, dunkle und lavendelfarbene Designs; drei Akzentfarben; anpassbare Textgröße und Abstände.
+- Acht Designs, acht Akzentfarben und anpassbare Suche, Filter, Notizanzahl und Schaltflächen.
+- Fenster bis auf 260 × 280 Pixel verkleinerbar.
 - Oberfläche auf Englisch, Spanisch, Französisch, Deutsch, Italienisch und Portugiesisch.
 - Optional immer im Vordergrund; automatische lokale Speicherung.
 - Updatesuche unter **Einstellungen → Updates** in installierten Versionen.

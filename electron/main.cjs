@@ -25,7 +25,7 @@ function createWindow() {
   const bounds = screen.getPrimaryDisplay().workArea;
   win = new BrowserWindow({
     width: 430, height: 680, x: bounds.x + bounds.width - 460, y: bounds.y + 42,
-    minWidth: 340, minHeight: 420, title: 'SFNotes', frame: false, transparent: true,
+    minWidth: 260, minHeight: 280, title: 'SFNotes', frame: false, transparent: true,
     alwaysOnTop: true, skipTaskbar: false, resizable: true, backgroundColor: '#00000000',
     icon: path.join(__dirname, '../build/icon.png'),
     webPreferences: { preload: path.join(__dirname, 'preload.cjs'), contextIsolation: true, nodeIntegration: false }

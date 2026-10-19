@@ -70,14 +70,14 @@ Ce guide vient après les instructions de téléchargement et d’installation a
 
 - Faites un clic droit sur une note ou cliquez sur son bouton **⋮** pour ouvrir les actions : **Copier**, **Couper** ou **Supprimer**. **Couper** copie le contenu puis retire la note de SFNotes.
 - Choisissez **Modifier le texte** dans le menu pour modifier une note textuelle ou un lien, puis enregistrez. Un clic avec le bouton central ouvre aussi l’éditeur pour ces notes.
-- Le bouton **…** de la barre supérieure donne accès aux actions de l’application : **Ajouter un fichier**, les options d’épinglage, **Réglages** et **Fermer SFNotes**.
+- Le bouton **…** donne accès aux actions de fichier et d’épinglage. Le bouton d’alimentation à côté ferme SFNotes ; dans les réglages, le bouton d’alimentation ferme l’application et le **X** ferme les réglages.
 - Les notes sont numérotées par défaut. Vous pouvez désactiver cette option dans les réglages.
 
 ### Modifier l’apparence et le comportement
 
 Ouvrez **Réglages** en bas à droite pour :
 
-- Choisir le thème clair, sombre ou lavande et une couleur d’accent jaune, bleue ou verte.
+- Choisir parmi huit thèmes et huit couleurs d’accent, masquer des commandes et déplacer les boutons d’ajout et d’épinglage entre les barres.
 - Régler la taille du texte et l’espacement des notes.
 - Choisir l’anglais, l’espagnol, le français, l’allemand, l’italien ou le portugais.
 - Garder SFNotes au-dessus des autres fenêtres et choisir de l’épingler au démarrage.
@@ -91,7 +91,8 @@ SFNotes enregistre automatiquement vos notes et préférences sur cet appareil. 
 
 - Aperçu du texte, des liens, des images et des fichiers ; numérotation facultative.
 - Recherche et filtres par type de note.
-- Thèmes clair, sombre et lavande ; trois couleurs de surbrillance ; taille du texte et espacement réglables.
+- Huit thèmes, huit couleurs d’accent et commandes de recherche, filtres, compteur et boutons personnalisables.
+- Fenêtre redimensionnable jusqu’à 260 × 280 pixels.
 - Interface en anglais, espagnol, français, allemand, italien et portugais.
 - Fenêtre toujours au premier plan en option et enregistrement local automatique.
 - Recherche des mises à jour depuis **Réglages → Mises à jour** dans les versions installées.

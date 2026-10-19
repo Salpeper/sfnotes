@@ -70,14 +70,14 @@ Este manual surge depois das instruções de transferência e instalação para 
 
 - Clique com o botão direito numa nota ou no botão **⋮** para abrir as ações **Copiar**, **Cortar** ou **Eliminar**. **Cortar** copia o conteúdo e remove a nota do SFNotes.
 - Escolha **Editar texto** para alterar uma nota de texto ou ligação e guarde as alterações. O clique com o botão do meio também abre o editor para estas notas.
-- O menu **…** na barra superior inclui **Adicionar ficheiro**, opções para fixar a janela, **Definições** e **Fechar SFNotes**.
+- O menu **…** inclui ações de ficheiros e fixação. O botão de energia ao lado fecha o SFNotes; nas Definições, o botão de energia fecha a aplicação e a **X** fecha as Definições.
 - As notas são numeradas por predefinição. Pode desativar a numeração nas definições.
 
 ### Alterar o aspeto e o comportamento
 
 Abra **Definições** no canto inferior direito para:
 
-- Escolher o tema claro, escuro ou lavanda e uma cor de realce amarela, azul ou verde.
+- Escolher entre oito temas e oito cores de realce, ocultar controlos e mover os botões adicionar e fixar entre as barras.
 - Ajustar o tamanho do texto e o espaçamento entre notas.
 - Escolher inglês, espanhol, francês, alemão, italiano ou português.
 - Manter o SFNotes acima das outras janelas e decidir se fica fixo ao iniciar.
@@ -91,7 +91,8 @@ O SFNotes guarda automaticamente as notas e preferências neste dispositivo. Fec
 
 - Pré-visualização de textos, ligações, imagens e ficheiros; numeração opcional.
 - Pesquisa e filtros por tipo de nota.
-- Temas claro, escuro e lavanda; três cores de realce; tamanho do texto e espaçamento ajustáveis.
+- Oito temas, oito cores de realce e controlos personalizáveis para pesquisa, filtros, contagem e botões.
+- Janela redimensionável até 260 × 280 píxeis.
 - Interface em inglês, espanhol, francês, alemão, italiano e português.
 - Janela sempre no topo opcional e gravação local automática.
 - Verificação de atualizações em **Definições → Atualizações** nas versões instaladas.

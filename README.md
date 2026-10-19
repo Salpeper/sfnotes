@@ -70,14 +70,14 @@ The guide is below the download and installation instructions so you can install
 
 - Right-click a note or click its **⋮** button to open its actions. Choose **Copy**, **Cut**, or **Delete**. **Cut** copies the content and removes the note from SFNotes.
 - Choose **Edit text** in the menu for a text or link note, make your changes, then save them. You can also middle-click a text or link note to open the editor.
-- The **…** button in the top bar opens app actions, including **Add file**, pin controls, **Settings**, and **Close SFNotes**.
+- The **…** button in the top bar opens file and pin actions. The power button beside it closes SFNotes; in Settings, the power button closes the app and the **X** closes Settings.
 - Notes are numbered in the list by default. Turn numbering off in Settings if you prefer.
 
 ### Change the appearance and behavior
 
 Open **Settings** at the bottom right to:
 
-- Choose the light, dark, or lavender theme and a yellow, blue, or green accent color.
+- Choose from eight themes and eight accent colors; hide controls and move the add and pin buttons between bars.
 - Set text size and the spacing between notes.
 - Choose English, Spanish, French, German, Italian, or Portuguese.
 - Decide whether to keep SFNotes above other windows, including whether it should pin on startup.
@@ -91,7 +91,8 @@ SFNotes saves notes and preferences automatically on this device. Closing the wi
 
 - Previews for text, links, images, and files, with optional numbering.
 - Search and filters by note type.
-- Light, dark, and lavender themes; three accent colors; adjustable text size and spacing.
+- Eight themes, eight accent colors, and customizable search, filters, note count, and buttons.
+- Resizable window down to 260 × 280 pixels.
 - English, Spanish, French, German, Italian, and Portuguese interface languages.
 - Optional always-on-top behavior and automatic local saving.
 - Update checks in **Settings → Updates** in installed versions.

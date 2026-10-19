@@ -70,14 +70,14 @@ Este manual aparece después de las instrucciones de descarga e instalación par
 
 - Haz clic derecho en una nota o pulsa su botón **⋮** para abrir las acciones. Puedes **Copiar**, **Cortar** o **Eliminar**. **Cortar** copia el contenido y elimina la nota de SFNotes.
 - Elige **Editar texto** en el menú para modificar una nota de texto o un enlace; después, guarda los cambios. También puedes hacer clic con el botón central sobre estas notas para abrir el editor.
-- El botón **…** de la barra superior contiene acciones de la aplicación: **Añadir archivo**, opciones para fijar la ventana, **Ajustes** y **Cerrar SFNotes**.
+- El botón **…** de la barra superior contiene las acciones de archivo y fijado. El botón de encendido a su derecha cierra SFNotes; en Ajustes, el botón de encendido cierra la aplicación y la **X** cierra Ajustes.
 - Las notas aparecen numeradas de forma predeterminada. Puedes desactivar la numeración en Ajustes.
 
 ### Cambiar la apariencia y el comportamiento
 
 Abre **Ajustes** abajo a la derecha para:
 
-- Elegir el tema claro, oscuro o lavanda y el color de resaltado amarillo, azul o verde.
+- Elegir entre ocho temas y ocho colores de resaltado; ocultar controles y mover los botones de añadir y fijar entre las barras.
 - Cambiar el tamaño del texto y el espacio entre notas.
 - Elegir español, inglés, francés, alemán, italiano o portugués.
 - Decidir si SFNotes se mantiene encima de otras ventanas y si se fija al iniciar.
@@ -91,7 +91,8 @@ SFNotes guarda automáticamente tus notas y preferencias en este dispositivo. Ce
 
 - Vista previa de textos, enlaces, imágenes y archivos, con numeración opcional.
 - Búsqueda y filtros por tipo de nota.
-- Temas claro, oscuro y lavanda; tres colores de resaltado; tamaño de texto y espaciado ajustables.
+- Ocho temas, ocho colores de resaltado y controles personalizables para búsqueda, filtros, contador y botones.
+- Ventana redimensionable hasta 260 × 280 píxeles.
 - Interfaz en español, inglés, francés, alemán, italiano y portugués.
 - Ventana siempre visible opcional y guardado automático local.
 - Búsqueda de actualizaciones desde **Ajustes → Actualizaciones** en las versiones instaladas.

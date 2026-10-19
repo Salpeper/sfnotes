@@ -70,14 +70,14 @@ Questa guida segue le istruzioni per il download e l’installazione, così puoi
 
 - Fai clic con il tasto destro su una nota o sul pulsante **⋮** per aprire le azioni **Copia**, **Taglia** o **Elimina**. **Taglia** copia il contenuto e rimuove la nota da SFNotes.
 - Scegli **Modifica testo** per modificare una nota di testo o un link e salva le modifiche. Anche il clic con il pulsante centrale apre l’editor per queste note.
-- Il menu **…** nella barra superiore contiene **Aggiungi file**, le opzioni per fissare la finestra, **Impostazioni** e **Chiudi SFNotes**.
+- Il menu **…** contiene le azioni per file e fissaggio. Il pulsante di accensione accanto chiude SFNotes; nelle impostazioni, il pulsante di accensione chiude l’app e la **X** chiude le impostazioni.
 - Le note sono numerate per impostazione predefinita. Puoi disattivare la numerazione nelle impostazioni.
 
 ### Cambiare aspetto e comportamento
 
 Apri **Impostazioni** in basso a destra per:
 
-- Scegliere il tema chiaro, scuro o lavanda e un colore di evidenziazione giallo, blu o verde.
+- Scegliere tra otto temi e otto colori di evidenziazione, nascondere controlli e spostare i pulsanti aggiungi e fissa tra le barre.
 - Regolare la dimensione del testo e la spaziatura tra le note.
 - Scegliere inglese, spagnolo, francese, tedesco, italiano o portoghese.
 - Mantenere SFNotes sopra le altre finestre e decidere se fissarla all’avvio.
@@ -91,7 +91,8 @@ SFNotes salva automaticamente note e preferenze su questo dispositivo. Chiudere 
 
 - Anteprima di testi, link, immagini e file; numerazione facoltativa.
 - Ricerca e filtri per tipo di nota.
-- Temi chiaro, scuro e lavanda; tre colori di evidenziazione; dimensione del testo e spaziatura regolabili.
+- Otto temi, otto colori di evidenziazione e controlli personalizzabili per ricerca, filtri, conteggio e pulsanti.
+- Finestra ridimensionabile fino a 260 × 280 pixel.
 - Interfaccia in inglese, spagnolo, francese, tedesco, italiano e portoghese.
 - Finestra sempre in primo piano opzionale e salvataggio locale automatico.
 - Controllo degli aggiornamenti in **Impostazioni → Aggiornamenti** nelle versioni installate.
