@@ -2,7 +2,7 @@
 
 **A small floating space for the things you want to keep close.** Save text, links, images, and files on your desktop, then find and copy them again when you need them. Your notes are saved automatically on your device.
 
-[English](README.md) · [Español](README.es.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Italiano](README.it.md) · [Português](README.pt.md)
+[English](README.md) · [Español](README.es.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Italiano](README.it.md) · [Português](README.pt.md) · [Website](https://salpeper.github.io/sfnotes/)
 
 ## Screenshots
 

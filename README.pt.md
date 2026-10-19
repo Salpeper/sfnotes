@@ -2,7 +2,7 @@
 
 **Um pequeno espaço flutuante para ter à mão o que é importante.** Guarde textos, ligações, imagens e ficheiros no ambiente de trabalho e volte a encontrá-los e copiá-los quando precisar. As notas são guardadas automaticamente neste dispositivo.
 
-[English](README.md) · [Español](README.es.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Italiano](README.it.md) · [Português](README.pt.md)
+[English](README.md) · [Español](README.es.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Italiano](README.it.md) · [Português](README.pt.md) · [Site](https://salpeper.github.io/sfnotes/)
 
 ## Capturas de ecrã
 

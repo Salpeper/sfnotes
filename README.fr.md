@@ -2,7 +2,7 @@
 
 **Un petit espace flottant pour garder l’essentiel à portée de main.** Enregistrez du texte, des liens, des images et des fichiers sur votre bureau, puis retrouvez-les et copiez-les quand vous en avez besoin. Vos notes sont automatiquement enregistrées sur votre appareil.
 
-[English](README.md) · [Español](README.es.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Italiano](README.it.md) · [Português](README.pt.md)
+[English](README.md) · [Español](README.es.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Italiano](README.it.md) · [Português](README.pt.md) · [Site web](https://salpeper.github.io/sfnotes/)
 
 ## Captures d’écran
 

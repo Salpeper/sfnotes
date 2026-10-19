@@ -2,7 +2,7 @@
 
 **Un piccolo spazio flottante per tenere a portata di mano ciò che conta.** Salva testi, link, immagini e file sul desktop, poi ritrovali e copiali quando ti servono. Le note vengono salvate automaticamente sul dispositivo.
 
-[English](README.md) · [Español](README.es.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Italiano](README.it.md) · [Português](README.pt.md)
+[English](README.md) · [Español](README.es.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Italiano](README.it.md) · [Português](README.pt.md) · [Sito web](https://salpeper.github.io/sfnotes/)
 
 ## Screenshot
 

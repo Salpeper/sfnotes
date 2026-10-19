@@ -2,7 +2,7 @@
 
 **Ein kleiner, schwebender Ort für alles, was du griffbereit behalten möchtest.** Speichere Texte, Links, Bilder und Dateien auf deinem Desktop und finde und kopiere sie bei Bedarf wieder. Deine Notizen werden automatisch auf diesem Gerät gespeichert.
 
-[English](README.md) · [Español](README.es.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Italiano](README.it.md) · [Português](README.pt.md)
+[English](README.md) · [Español](README.es.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Italiano](README.it.md) · [Português](README.pt.md) · [Webseite](https://salpeper.github.io/sfnotes/)
 
 ## Screenshots
 
