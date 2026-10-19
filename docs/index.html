@@ -4,87 +4,90 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#f7f5ef" />
-    <meta name="description" content="SFNotes guarda tus textos, enlaces, imágenes y archivos a mano en el escritorio. Descarga gratis para Windows, macOS y Linux." />
-    <meta property="og:title" content="SFNotes — tus notas, siempre a mano" />
-    <meta property="og:description" content="Un espacio flotante para guardar y recuperar lo que te importa. Gratis para Windows, macOS y Linux." />
+    <meta name="description" content="SFNotes keeps your texts, links, images and files close at hand on your desktop. Free for Windows, macOS and Linux." />
+    <meta property="og:title" content="SFNotes — your notes, always at hand" />
+    <meta property="og:description" content="A floating space to save and find what matters. Free for Windows, macOS and Linux." />
     <meta property="og:image" content="images/notes-main.png" />
-    <title>SFNotes — tus notas, siempre a mano</title>
+    <title>SFNotes — your notes, always at hand</title>
     <link rel="icon" type="image/png" href="images/sfnotes-icon.png" />
     <link rel="stylesheet" href="styles.css" />
     <script src="site.js" defer></script>
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#inicio" aria-label="SFNotes, inicio">
+      <a class="brand" href="#inicio" aria-label="SFNotes, home" data-i18n-aria="brandHome">
         <img src="images/sfnotes-icon.png" alt="" />
         <span>SFNotes</span>
       </a>
-      <nav aria-label="Navegación principal">
-        <a href="#funciones">Funciones</a>
-        <a href="#como-funciona">Cómo funciona</a>
-        <a class="nav-download" href="#descarga">Descargar <span aria-hidden="true">↓</span></a>
+      <nav aria-label="Main navigation" data-i18n-aria="mainNavigation">
+        <a href="#funciones" data-i18n="navFeatures">Features</a>
+        <a href="#como-funciona" data-i18n="navHow">How it works</a>
+        <a class="nav-download" href="#descarga"><span data-i18n="navDownload">Download</span> <span aria-hidden="true">↓</span></a>
       </nav>
+      <select id="language-select" class="language-select" aria-label="Language" data-i18n-aria="languageLabel">
+        <option value="es">Español</option><option value="en">English</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="it">Italiano</option><option value="pt">Português</option>
+      </select>
     </header>
 
     <main id="inicio">
       <section class="hero section-wrap">
         <div class="hero-copy">
-          <p class="eyebrow"><span class="status-dot"></span> UN ESPACIO PEQUEÑO PARA TUS GRANDES IDEAS</p>
-          <h1>Lo que necesitas.<br /><span>Siempre a mano.</span></h1>
-          <p class="hero-description">Guarda textos, enlaces, imágenes y archivos en una nota flotante en tu escritorio. Encuéntralos y cópialos cuando vuelvas a necesitarlos.</p>
+          <p class="eyebrow"><span class="status-dot"></span> <span data-i18n="heroEyebrow">A SMALL SPACE FOR YOUR BIG IDEAS</span></p>
+          <h1 data-i18n="heroTitle">What you need.<br /><span>Always at hand.</span></h1>
+          <p class="hero-description" data-i18n="heroDescription">Keep texts, links, images and files in a floating note on your desktop. Find and copy them whenever you need them.</p>
           <div class="hero-actions">
             <a class="button button-primary" id="hero-download" href="https://github.com/Salpeper/sfnotes/releases/latest">
               <span class="download-icon" aria-hidden="true">↓</span>
-              <span><b id="hero-download-label">Descargar SFNotes</b><small id="hero-download-detail">Gratis para Windows, macOS y Linux</small></span>
+              <span><b id="hero-download-label" data-i18n="heroDownload">Download SFNotes</b><small id="hero-download-detail" data-i18n="heroDownloadDetail">Free for Windows, macOS and Linux</small></span>
             </a>
             <a class="button button-secondary" href="https://github.com/Salpeper/sfnotes" target="_blank" rel="noreferrer">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .9a11.1 11.1 0 0 0-3.5 21.6c.55.1.76-.24.76-.53v-2.08c-3.1.68-3.76-1.32-3.76-1.32-.5-1.3-1.23-1.65-1.23-1.65-1.01-.69.08-.68.08-.68 1.12.08 1.7 1.15 1.7 1.15 1 1.7 2.62 1.2 3.26.92.1-.72.39-1.2.7-1.47-2.48-.28-5.09-1.24-5.09-5.52 0-1.22.44-2.22 1.15-3-.12-.28-.5-1.42.11-2.95 0 0 .94-.3 3.06 1.14a10.63 10.63 0 0 1 5.57 0c2.13-1.44 3.06-1.14 3.06-1.14.61 1.53.23 2.67.12 2.95.71.78 1.14 1.78 1.14 3 0 4.29-2.62 5.23-5.11 5.51.4.35.75 1.03.75 2.08v3.07c0 .29.2.64.77.53A11.1 11.1 0 0 0 12 .9Z" /></svg>
-              Ver en GitHub
+              <span data-i18n="viewGithub">View on GitHub</span>
             </a>
           </div>
-          <div class="hero-note"><span aria-hidden="true">✓</span> Tus notas se guardan en tu dispositivo. Sin cuenta y sin sincronización en la nube.</div>
+          <div class="hero-note"><span aria-hidden="true">✓</span> <span data-i18n="privacy">Your notes stay on your device. No account or cloud sync.</span></div>
         </div>
 
-        <div class="hero-visual" aria-label="Vista previa de SFNotes">
+        <div class="hero-visual" aria-label="SFNotes preview" data-i18n-aria="previewLabel">
           <div class="visual-glow"></div>
-          <div class="floating-tag tag-top"><span>↗</span> Enlaces guardados</div>
+          <div class="floating-tag tag-top"><span>↗</span> <span data-i18n="savedLinks">Saved links</span></div>
           <div class="app-window">
-            <img src="images/notes-main.png" alt="Captura de SFNotes con notas de texto y enlaces" />
+            <img src="images/notes-main.png" alt="SFNotes screenshot with text notes and links" data-i18n-alt="screenshotAlt" />
           </div>
-          <div class="floating-tag tag-bottom"><span class="tag-dot"></span> Siempre a mano</div>
+          <div class="floating-tag tag-bottom"><span class="tag-dot"></span> <span data-i18n="alwaysAtHand">Always at hand</span></div>
         </div>
       </section>
 
-      <section class="trust-strip" aria-label="Compatibilidad y privacidad">
-        <div><span class="strip-icon">⌘</span><span>Windows, macOS y Linux</span></div>
+      <section class="trust-strip" aria-label="Compatibility and privacy" data-i18n-aria="trustLabel">
+        <div><span class="strip-icon">⌘</span><span data-i18n="platforms">Windows, macOS and Linux</span></div>
         <i></i>
-        <div><span class="strip-icon">◉</span><span>Guardado local automático</span></div>
+        <div><span class="strip-icon">◉</span><span data-i18n="localSave">Automatic local saving</span></div>
         <i></i>
-        <div><span class="strip-icon">↗</span><span>Gratis y de código abierto</span></div>
+        <div><span class="strip-icon">↗</span><span data-i18n="freeOpenSource">Free and open source</span></div>
       </section>
 
       <section class="features section-wrap" id="funciones">
         <div class="section-heading">
-          <p class="eyebrow">MENOS BÚSQUEDAS, MÁS FLUIDEZ</p>
-          <h2>Todo lo importante,<br />en un mismo sitio.</h2>
-          <p>Un rincón discreto en el escritorio para esas cosas que siempre acabas buscando.</p>
+          <p class="eyebrow" data-i18n="featuresEyebrow">LESS SEARCHING, MORE FLOW</p>
+          <h2 data-i18n="featuresTitle">Everything important,<br />in one place.</h2>
+          <p data-i18n="featuresDescription">A quiet corner on your desktop for the things you are always looking for.</p>
         </div>
         <div class="feature-grid">
           <article class="feature-card feature-wide">
             <div class="feature-icon icon-yellow">↗</div>
-            <h3>Guarda de todo</h3>
-            <p>Textos, enlaces, imágenes y archivos en una lista rápida. Pega desde el portapapeles o añade archivos desde el menú.</p>
-            <div class="type-chips"><span>Texto</span><span>Enlaces</span><span>Imágenes</span><span>Archivos</span></div>
+            <h3 data-i18n="saveTitle">Save anything</h3>
+            <p data-i18n="saveDescription">Texts, links, images and files in a handy list. Paste from the clipboard or add files from the menu.</p>
+            <div class="type-chips"><span data-i18n="text">Text</span><span data-i18n="links">Links</span><span data-i18n="images">Images</span><span data-i18n="files">Files</span></div>
           </article>
           <article class="feature-card">
             <div class="feature-icon icon-blue">⌕</div>
-            <h3>Encuentra al instante</h3>
-            <p>Busca por contenido y filtra por tipo de nota para llegar rápido a lo que necesitas.</p>
+            <h3 data-i18n="findTitle">Find it instantly</h3>
+            <p data-i18n="findDescription">Search by content and filter by note type to get to what you need quickly.</p>
           </article>
           <article class="feature-card">
             <div class="feature-icon icon-green">⌘</div>
-            <h3>A tu manera</h3>
-            <p>Elige entre ocho temas, ajusta los colores y oculta o mueve los controles para adaptar la ventana a tu gusto.</p>
+            <h3 data-i18n="customizeTitle">Make it yours</h3>
+            <p data-i18n="customizeDescription">Choose from eight themes, adjust colors, and hide or move controls to make the window your own.</p>
           </article>
         </div>
       </section>
@@ -92,47 +95,47 @@
       <section class="how-section" id="como-funciona">
         <div class="section-wrap how-layout">
           <div class="section-heading">
-            <p class="eyebrow">ASÍ DE SENCILLO</p>
-            <h2>De tu portapapeles<br />a tus notas.</h2>
-            <p>SFNotes está pensado para guardar algo en segundos y volver a ello sin interrumpir lo que estabas haciendo.</p>
+            <p class="eyebrow" data-i18n="howEyebrow">IT'S THAT SIMPLE</p>
+            <h2 data-i18n="howTitle">From your clipboard<br />to your notes.</h2>
+            <p data-i18n="howDescription">SFNotes is made for saving something in seconds and coming back to it without interrupting your work.</p>
           </div>
           <ol class="steps">
-            <li><span>01</span><div><h3>Copia o pega</h3><p>Usa el botón «+» o el atajo de teclado para guardar lo que tengas en el portapapeles.</p></div></li>
-            <li><span>02</span><div><h3>Encuéntralo</h3><p>Busca, filtra y organiza tus notas. Personaliza SFNotes desde Ajustes.</p></div></li>
-            <li><span>03</span><div><h3>Vuelve a usarlo</h3><p>Haz clic en una nota para copiarla de nuevo. Tus datos permanecen en tu dispositivo.</p></div></li>
+            <li><span>01</span><div><h3 data-i18n="stepOneTitle">Copy or paste</h3><p data-i18n="stepOneDescription">Use the “+” button or keyboard shortcut to save whatever is on your clipboard.</p></div></li>
+            <li><span>02</span><div><h3 data-i18n="stepTwoTitle">Find it</h3><p data-i18n="stepTwoDescription">Search, filter and organize your notes. Customize SFNotes in Settings.</p></div></li>
+            <li><span>03</span><div><h3 data-i18n="stepThreeTitle">Use it again</h3><p data-i18n="stepThreeDescription">Click a note to copy it again. Your data stays on your device.</p></div></li>
           </ol>
         </div>
       </section>
 
       <section class="download-section section-wrap" id="descarga">
         <div class="download-heading">
-          <p class="eyebrow">LISTO CUANDO TÚ LO ESTÉS</p>
-          <h2>Hazle un hueco<br />en tu escritorio.</h2>
-          <p>Descarga SFNotes gratis. Elige tu sistema y empieza a guardar lo que te importa.</p>
+          <p class="eyebrow" data-i18n="downloadEyebrow">READY WHEN YOU ARE</p>
+          <h2 data-i18n="downloadTitle">Make room for it<br />on your desktop.</h2>
+          <p data-i18n="downloadDescription">Download SFNotes for free. Choose your system and start saving what matters.</p>
         </div>
         <div class="download-grid">
           <article class="download-card" data-platform="windows">
-            <div class="platform-icon windows-icon">⊞</div><h3>Windows</h3><p>Windows 10 y 11 · x64</p>
-            <a class="platform-download" href="https://github.com/Salpeper/sfnotes/releases/latest" data-asset="windows">Descargar .exe <span>↓</span></a>
+            <div class="platform-icon windows-icon">⊞</div><h3>Windows</h3><p data-i18n="windowsDescription">Windows 10 and 11 · x64</p>
+            <a class="platform-download" href="https://github.com/Salpeper/sfnotes/releases/latest" data-asset="windows"><span data-i18n="downloadExe">Download .exe</span> <span>↓</span></a>
           </article>
           <article class="download-card" data-platform="macos">
-            <div class="platform-icon apple-icon">●</div><h3>macOS</h3><p>Intel y Apple Silicon</p>
-            <a class="platform-download" href="https://github.com/Salpeper/sfnotes/releases/latest" data-asset="macos">Descargar .dmg <span>↓</span></a>
+            <div class="platform-icon apple-icon">●</div><h3>macOS</h3><p data-i18n="macDescription">Intel and Apple Silicon</p>
+            <a class="platform-download" href="https://github.com/Salpeper/sfnotes/releases/latest" data-asset="macos"><span data-i18n="downloadDmg">Download .dmg</span> <span>↓</span></a>
           </article>
           <article class="download-card" data-platform="linux">
-            <div class="platform-icon linux-icon">◉</div><h3>Linux</h3><p>AppImage, DEB y RPM · x64</p>
-            <a class="platform-download" href="https://github.com/Salpeper/sfnotes/releases/latest" data-asset="linux">Descargar AppImage <span>↓</span></a>
+            <div class="platform-icon linux-icon">◉</div><h3>Linux</h3><p data-i18n="linuxDescription">AppImage, DEB and RPM · x64</p>
+            <a class="platform-download" href="https://github.com/Salpeper/sfnotes/releases/latest" data-asset="linux"><span data-i18n="downloadAppImage">Download AppImage</span> <span>↓</span></a>
           </article>
         </div>
-        <p class="other-downloads">¿Buscas otro formato? <a href="https://github.com/Salpeper/sfnotes/releases/latest" id="all-downloads">Ver todas las descargas en GitHub <span>↗</span></a></p>
-        <p class="release-note" id="release-note">Versión más reciente · <span>1.0.0</span></p>
+        <p class="other-downloads"><span data-i18n="otherFormat">Looking for another format?</span> <a href="https://github.com/Salpeper/sfnotes/releases/latest" id="all-downloads"><span data-i18n="allDownloads">See all downloads on GitHub</span> <span>↗</span></a></p>
+        <p class="release-note" id="release-note"><span data-i18n="latestVersion">Latest version</span> · <span>1.0.0</span></p>
       </section>
     </main>
 
     <footer class="site-footer">
       <a class="brand footer-brand" href="#inicio"><img src="images/sfnotes-icon.png" alt="" /><span>SFNotes</span></a>
-      <p>Una pequeña nota para tener cerca lo que importa.</p>
-      <div><a href="https://github.com/Salpeper/sfnotes" target="_blank" rel="noreferrer">Código fuente</a><a href="https://github.com/Salpeper/sfnotes/releases/latest">Descargas</a><span>© <span id="year">2026</span> SFNotes</span></div>
+      <p data-i18n="footerTagline">A little note to keep what matters close.</p>
+      <div><a href="https://github.com/Salpeper/sfnotes" target="_blank" rel="noreferrer" data-i18n="sourceCode">Source code</a><a href="https://github.com/Salpeper/sfnotes/releases/latest" data-i18n="downloads">Downloads</a><span>© <span id="year">2026</span> SFNotes</span></div>
     </footer>
   </body>
 </html>
