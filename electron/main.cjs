@@ -5,6 +5,43 @@ const fs = require('node:fs');
 let win;
 let autoUpdater;
 let registeredShortcuts = [];
+let boundsSaveTimer;
+const windowStateFile = () => path.join(app.getPath('userData'), 'window-state.json');
+function readWindowState() {
+  try {
+    const state = JSON.parse(fs.readFileSync(windowStateFile(), 'utf8'));
+    if (![state.x, state.y, state.width, state.height].every(Number.isFinite)) return null;
+    if (state.width < 260 || state.height < 280) return null;
+    const display = screen.getDisplayMatching(state);
+    const area = display.workArea;
+    const width = Math.min(state.width, area.width);
+    const height = Math.min(state.height, area.height);
+    const x = Math.min(Math.max(state.x, area.x), area.x + area.width - width);
+    const y = Math.min(Math.max(state.y, area.y), area.y + area.height - height);
+    return { x, y, width, height };
+  } catch (error) {
+    if (error.code !== 'ENOENT') console.error('No se pudo leer la posición de SFNotes:', error);
+    return null;
+  }
+}
+function saveWindowState() {
+  if (!win || win.isDestroyed()) return;
+  const state = win.getBounds();
+  const target = windowStateFile();
+  const temporary = `${target}.tmp`;
+  try {
+    fs.mkdirSync(path.dirname(target), { recursive: true });
+    fs.writeFileSync(temporary, JSON.stringify(state), 'utf8');
+    fs.renameSync(temporary, target);
+  } catch (error) {
+    console.error('No se pudo guardar la posición de SFNotes:', error);
+    try { fs.rmSync(temporary, { force: true }); } catch {}
+  }
+}
+function scheduleWindowStateSave() {
+  clearTimeout(boundsSaveTimer);
+  boundsSaveTimer = setTimeout(saveWindowState, 250);
+}
 function getAutoUpdater() {
   if (autoUpdater) return autoUpdater;
   ({ autoUpdater } = require('electron-updater'));
@@ -23,12 +60,19 @@ function getAutoUpdater() {
 }
 function createWindow() {
   const bounds = screen.getPrimaryDisplay().workArea;
+  const savedState = readWindowState();
   win = new BrowserWindow({
-    width: 430, height: 680, x: bounds.x + bounds.width - 460, y: bounds.y + 42,
+    ...(savedState || { width: 430, height: 680, x: bounds.x + bounds.width - 460, y: bounds.y + 42 }),
     minWidth: 260, minHeight: 280, title: 'SFNotes', frame: false, transparent: true,
     alwaysOnTop: true, skipTaskbar: false, resizable: true, backgroundColor: '#00000000',
     icon: path.join(__dirname, '../build/icon.png'),
     webPreferences: { preload: path.join(__dirname, 'preload.cjs'), contextIsolation: true, nodeIntegration: false }
+  });
+  win.on('move', scheduleWindowStateSave);
+  win.on('resize', scheduleWindowStateSave);
+  win.on('close', () => {
+    clearTimeout(boundsSaveTimer);
+    saveWindowState();
   });
   win.webContents.on('did-fail-load', (_event, code, description, url) => {
     console.error(`No se pudo cargar SFNotes (${code}): ${description} — ${url}`);
